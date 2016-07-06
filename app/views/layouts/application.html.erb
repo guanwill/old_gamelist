@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gamelist</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <nav class="navbar navbar-inverse ">
+    <div class="container">
+      <div class="navbar-header">
+        <%= link_to 'My Games List', root_path, class: 'navbar-brand' %>  <!--can replace topick with logo and uses navbar-brand class for styling-->
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><% if current_user %>
+          <!-- <button type="button" class="btn btn-default navbar-btn upload-photo"><%= link_to 'Upload Photo', '/photos/new'%></button>-->
+        <%end%></li>
+
+        <% if user_signed_in? %>
+
+          <li role="presentation" class="active"><%= link_to current_user.email, edit_user_registration_path %></li>
+          <li role="presentation" class="active"><%= link_to 'Log Out', destroy_user_session_path, :data => {:confirm => 'Are you sure?'}, method: :delete %></li>
+        <% else %>
+          <li role="presentation" class="active"><%= link_to 'Log In', new_user_session_path %></li>
+          <li role="presentation" class="active"><%= link_to 'Sign Up', new_user_registration_path %></li>
+
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+
+
+
+<%= yield %>
+
+</body>
+</html>

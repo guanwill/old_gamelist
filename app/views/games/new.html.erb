@@ -1,0 +1,17 @@
+<% if flash[:errors] %>
+  <p><%= flash[:errors] %></p>
+<%end%>
+
+<h1> Add Game </h1>
+
+<%= form_for :game, url: games_path do |f| %>
+  Title: <%= f.text_field :title %> <br />
+  <!--create select drop down button. selection defined in game model -->
+  Genre: <%= f.collection_select :genre, Game::GENRES, :to_s, :to_s, :include_blank => true %> <br />
+  Platform: <%= f.collection_select :platform, Game::PLATFORMS, :to_s, :to_s, :include_blank => true%> <br />
+  Progress (%): <%= f.collection_select :progress, Game::PROGRESS, :to_s, :to_s%> <br />
+  Release Date: <%= f.date_field :release_date %> <br />
+  Rating: <%= f.number_field :rating %> <br />
+
+  <%= f.submit 'Add Game', class: 'btn btn-primary add_game_button' %>
+<%end%>
