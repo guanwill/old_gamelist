@@ -5,7 +5,7 @@ class Game < ActiveRecord::Base
   PROGRESS = [0, 25, 50, 75, 100, 200]
 
   validates :title, presence: true, :uniqueness => true
-  validates :platform, presence: true
+  # validates :platform, presence: true
 
   ratyrate_rateable "rating"
 

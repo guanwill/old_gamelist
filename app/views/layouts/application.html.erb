@@ -5,10 +5,11 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-  <nav class="navbar navbar-inverse ">
+  <nav class="navbar navbar-inversee navbar-fixed-topp">
     <div class="container">
       <div class="navbar-header">
         <%= link_to 'My Games List', root_path, class: 'navbar-brand' %>  <!--can replace topick with logo and uses navbar-brand class for styling-->
@@ -16,17 +17,38 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li><% if current_user %>
+          <ul class="nav navbar-nav navbar-right">
+          <% if current_user %>
+
+          <%= link_to root_path, class: 'navbar-brand' do %>
+            <span class="glyphicon glyphicon-expand" aria-hidden="true"></span>
+          <%end%>
+
+          <%= link_to plan_path, class: 'navbar-brand' do %>
+            <span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+          <%end%>
+
+          <%end%></li>
           <!-- <button type="button" class="btn btn-default navbar-btn upload-photo"><%= link_to 'Upload Photo', '/photos/new'%></button>-->
         <%end%></li>
 
         <% if user_signed_in? %>
+          <%= link_to edit_user_registration_path, class: 'navbar-brand' do %>
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+          <%end%>
 
-          <li role="presentation" class="active"><%= link_to current_user.email, edit_user_registration_path %></li>
-          <li role="presentation" class="active"><%= link_to 'Log Out', destroy_user_session_path, :data => {:confirm => 'Are you sure?'}, method: :delete %></li>
+          <%= link_to destroy_user_session_path, :data => {:confirm => 'Are you sure?'}, method: :delete, class: 'navbar-brand' do %>
+            <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+          <%end%>
+
         <% else %>
-          <li role="presentation" class="active"><%= link_to 'Log In', new_user_session_path %></li>
-          <li role="presentation" class="active"><%= link_to 'Sign Up', new_user_registration_path %></li>
+          <%= link_to new_user_session_path, class: 'navbar-brand' do %>
+            <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+          <%end%>
 
+          <%= link_to new_user_registration_path, class: 'navbar-brand' do %>
+            <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+          <%end%>
         <% end %>
       </ul>
     </div>

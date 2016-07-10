@@ -2,16 +2,24 @@
   <p><%= flash[:errors] %></p>
 <%end%>
 
-<h1> Edit Game </h1>
+<h1 id="h1-game"> Edit Game </h1>
 
+<div id='game-container'>
 <%= form_for @game, method: :patch do |f| %>
-  Title: <%= f.text_field :title %> <br />
+  Title: <br />
+  <%= f.text_field :title %> <br /><br />
   <!--create select drop down button. selection defined in game model -->
-  Genre: <%= f.collection_select :genre, Game::GENRES, :to_s, :to_s, :include_blank => true %> <br />
-  Platform: <%= f.collection_select :platform, Game::PLATFORMS, :to_s, :to_s, :include_blank => true, class: "browser-default" %> <br />
-  Release Date: <%= f.date_field :release_date %> <br />
-  Progress (%): <%= f.collection_select :progress, Game::PROGRESS, :to_s, :to_s%> <br />
-  Rating: <%= f.text_field :rating %> <br />
+  Genre: <br />
+  <%= f.collection_select :genre, Game::GENRES, :to_s, :to_s, :include_blank => true %> <br /><br />
+  Platform: <br />
+  <%= f.collection_select :platform, Game::PLATFORMS, :to_s, :to_s, :include_blank => true%> <br /><br />
+  Release Date: <br />
+  <%= f.date_field :release_date %> <br /><br />
+  Progress (%): <br />
+  <%= f.collection_select :progress, Game::PROGRESS, :to_s, :to_s%> <br /><br />
+
+  <%= f.hidden_field :rating %> <br /><br />
 
   <%= f.submit 'Submit', class: 'btn btn-primary add_game_button' %>
 <%end%>
+<div>

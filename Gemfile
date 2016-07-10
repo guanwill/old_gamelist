@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'httparty'
 gem 'devise'
 gem 'ratyrate'
 gem 'bootstrap-sass', '~> 3.3.6'

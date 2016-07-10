@@ -1,3 +1,120 @@
 // Place all the styles related to the games controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.navbar-brand {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.navbar {
+  background: rgb(51, 27, 103);
+}
+
+.navbar-brand {
+  color: #fff;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+  font-family: 'Press Start 2P', cursive;
+}
+
+/*glow*/
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px rgb(24, 104, 177), 0 0 20px rgb(24, 104, 177), 0 0 30px rgb(24, 104, 177), 0 0 40px rgb(50, 143, 201)
+, 0 0 70px rgb(50, 143, 201)
+, 0 0 80px rgb(50, 143, 201)
+, 0 0 100px rgb(50, 143, 201)
+, 0 0 150px rgb(50, 143, 201)
+;
+  }
+  to {
+    text-shadow: 0 0 5px rgb(24, 104, 177), 0 0 10px rgb(24, 104, 177), 0 0 15px rgb(24, 104, 177), 0 0 20px rgb(50, 143, 201)
+, 0 0 35px rgb(50, 143, 201)
+, 0 0 40px rgb(50, 143, 201)
+, 0 0 50px rgb(50, 143, 201)
+, 0 0 75px rgb(50, 143, 201)
+;
+  }
+}
+
+.navbar-brand:hover {
+  color: rgb(23, 181, 134);
+}
+
+.nav-name > a {
+  color: white;
+}
+
+
+//--INDEX--//
+#h1-playing {
+  text-align: center;
+  margin: 50px;
+}
+
+#index-container   {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
+.add-game-container {
+  display: block;
+  text-align: center;
+  margin: 40px;
+}
+.add-game {
+  text-align: center;
+}
+
+//--PLAN--//
+#h1-plan {
+  text-align: center;
+  margin: 50px;
+}
+
+#plan-container   {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
+.add-game-container {
+  display: block;
+  text-align: center;
+  margin: 40px;
+}
+.add-game {
+  text-align: center;
+}
+
+//--EDIT AND ADD PAGES--//
+#h1-game {
+  text-align: center;
+  margin: 50px;
+}
+#game-container   {
+  // width: 70%;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#game_title{
+  width: 300px;
+  text-align: center;
+  margin-top: 10px;
+}
+#game_genre, #game_platform, #game_progress, #game_release_date{
+  width: 150px;
+  text-align: center;
+  margin-top: 10px;
+}
+#game_release_date {
+  border-radius: 7px;
+}
