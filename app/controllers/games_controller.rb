@@ -16,17 +16,18 @@ def completed
 end
 
 def create
-  @games = Game.new(game_params)
-  @games.user_id = current_user.id
-  if @games.save && @game.progress != 100 && @game.progress != 0
-    redirect_to games_path, :flash => {:errors => @games.errors.full_messages.join(', ')}
-  elsif @game.save && @game.progress == 100 || @game.progress == 200
-    redirect_to completed_path
-  elsif @game.save && @game.progress == 0
-    redirect_to plan_path
-  else
-    redirect_to new_game_path
-  end
+  game = Game.new(game_params)
+  game.user_id = current_user.id
+  game.save
+    if game.progress != 100 && game.progress != 200 && game.progress != 0
+      render 'index'
+    elsif game.progress == 100 || game.progress == 200
+      render 'completed'
+    elsif game.progress == 0
+      render 'plan'
+    else
+      redirect_to edit_game_path
+    end
 end
 
 def new
@@ -40,8 +41,8 @@ end
 def update
   @game = Game.find(params[:id])
   @game.update(game_params)
-  # if game progress is above 0% and below 100%, direct to current playing. If it is 100% or 200%, direct to finsihed playing. If 0%, direct to planning to play
-  if @game.valid? && @game.progress != 100 && @game.progress != 0
+  # if game progress is above 0% and below 100%, direct to current playing. If it is 100
+  if @game.valid? && @game.progress != 100 && @game.progress != 200 && @game.progress != 0
     redirect_to games_path
   elsif @game.valid? && @game.progress == 100 || @game.progress == 200
     redirect_to completed_path
@@ -55,7 +56,16 @@ end
 def destroy
   @game = Game.find(params[:id])
   @game.destroy
-  redirect_to games_path
+  if @game.progress != 100 && @game.progress != 200 && @game.progress != 0
+    redirect_to games_path
+  elsif @game.valid? && @game.progress == 100 || @game.progress == 200
+    redirect_to completed_path
+  elsif @game.valid? && @game.progress == 0
+    redirect_to plan_path
+  else
+    redirect_to edit_game_path
+  end
+  # render 'back'
 end
 
 def show
