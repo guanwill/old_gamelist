@@ -1,5 +1,5 @@
 
-<h1 id="h1-playing"> Currently Playing </h1>
+<h1 id="h1-playing"> Finished Playing </h1>
 
 <div class="add-game-container">
   <%= link_to 'Add Game', new_game_path, class: "add-game btn btn-default" %> <br/>
@@ -23,7 +23,7 @@
   <tbody>
     <% Game.all.each do |game| %>
       <%if current_user.id == game.user_id%>
-          <%if game.progress != 0 && game.progress != 100 %>
+          <%if game.progress == 100 || game.progress == 200 %>
 
               <tr>
                 <!-- <td class="col-sm-2"><%= link_to game.title.capitalize, game %></td> -->

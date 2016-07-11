@@ -4,9 +4,14 @@ before_action :authenticate_user!
 
 def index
   @games = Game.average(:rating)
+  # @gamelist = HTTParty.get "http://www.giantbomb.com/api/games/?api_key=cf71909f53e1497132eb781d7aab4d0936bfb352&format=json&field_list=name&offset=100"
 end
 
 def plan
+  @games = Game.average(:rating)
+end
+
+def completed
   @games = Game.average(:rating)
 end
 
@@ -31,8 +36,13 @@ end
 def update
   @game = Game.find(params[:id])
   @game.update(game_params)
-  if @game.valid?
+  # if game progress is above 0% and below 100%, direct to current playing. If it is 100% or 200%, direct to finsihed playing. If 0%, direct to planning to play
+  if @game.valid? && @game.progress != 100 && @game.progress != 0
     redirect_to games_path
+  elsif @game.valid? && @game.progress == 100 || @game.progress == 200
+    redirect_to completed_path
+  elsif @game.valid? && @game.progress == 0
+    redirect_to plan_path
   else
     redirect_to edit_game_path
   end
