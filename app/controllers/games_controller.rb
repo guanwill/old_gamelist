@@ -18,8 +18,12 @@ end
 def create
   @games = Game.new(game_params)
   @games.user_id = current_user.id
-  if @games.save
+  if @games.save && @game.progress != 100 && @game.progress != 0
     redirect_to games_path, :flash => {:errors => @games.errors.full_messages.join(', ')}
+  elsif @game.save && @game.progress == 100 || @game.progress == 200
+    redirect_to completed_path
+  elsif @game.save && @game.progress == 0
+    redirect_to plan_path
   else
     redirect_to new_game_path
   end
