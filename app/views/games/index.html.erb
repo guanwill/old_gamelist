@@ -32,7 +32,7 @@
                 <td class="col-sm-1.5"><%=game.platform%></td>
                 <td class="col-sm-1.5"><%=game.progress%>%</td>
                 <td class="col-sm-1.5"><%=game.release_date%></td>
-                <td class="col-sm-2"><%=rating_for game, 'rating', star: 5, disable_after_rate: false, enable_half: true, cancel_place: 'right' %></td>
+                <td class="col-sm-2"><%=rating_for game, 'rating', star: 5, disable_after_rate: false, enable_half: true, cancel_place: 'right', star_path: '/images' %></td>
                 <td class><%= link_to 'Edit', edit_game_path(game) %></td>
                 <td class><%= link_to 'Delete', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
               </tr>
