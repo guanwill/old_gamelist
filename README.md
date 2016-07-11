@@ -26,3 +26,4 @@ There are indeed a lot of websites out there that provide similar features, howe
 ##Future Considerations
 * Use an external API to store names of all existing games into the database
 * Integrate autofill feature so that users don't have to type the whole name of the game
+* Integrate an info page for each game.
