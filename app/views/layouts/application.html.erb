@@ -41,7 +41,7 @@
             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
           <%end%>
 
-          <%= link_to destroy_user_session_path, :data => {:confirm => 'Are you sure?'}, method: :delete, class: 'navbar-brand' do %>
+          <%= link_to destroy_user_session_path, :data => {:confirm => 'Are you sure you want to log out?'}, method: :delete, class: 'navbar-brand' do %>
             <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
           <%end%>
 
