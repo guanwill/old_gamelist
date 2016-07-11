@@ -1,7 +1,10 @@
 #MY GAMES LIST
 
+##Website
+Heroku: https://stark-retreat-73573.herokuapp.com/
+
 ##Purpose
-* Tracks the status of all the video games that you are playing
+Tracks the status of all the video games that you are playing
 
 ##Inspiration
 There are indeed a lot of websites out there that provide similar features, however, I still end up using Ms Excel at the end of the day to track my games. Why? Because Excel is simple and very easy on the eyes. That was all I needed and thus this app was created to solve this (personal) problem. I hope those who share a similar opinion find this app helpful.
