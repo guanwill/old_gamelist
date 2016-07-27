@@ -6,6 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -20,7 +21,7 @@
           <ul class="nav navbar-nav navbar-right">
           <% if current_user %>
 
-          <%= link_to root_path, class: 'navbar-brand' do %>
+          <%= link_to games_path, class: 'navbar-brand' do %>
             <span class="glyphicon glyphicon-expand" aria-hidden="true"></span>
           <%end%>
 

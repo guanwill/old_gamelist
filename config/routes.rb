@@ -6,10 +6,11 @@ end
 
 post '/rate' => 'rater#create', :as => 'rate'
 devise_for :users
-root to: "games#index"
+root to: "about#about"
 
 resources :games
 get '/plan' => 'games#plan'
 get '/completed' => 'games#completed'
+get '/about' => 'about#about'
 
 end
