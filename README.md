@@ -31,5 +31,5 @@ There are indeed a lot of websites out there that provide similar features, howe
 * Integrate an info page for each game.
 
 ##Update 1.1 27/7/2016
-* Seeded a massive list of games into postgreSQL
+* Seeded a csv file with a massive list of games into postgreSQL
 * Implemented an autofill feature when users try to add a game
