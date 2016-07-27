@@ -21,10 +21,14 @@ There are indeed a lot of websites out there that provide similar features, howe
 * Bootstrap CSS
 * [RatyRate Gem](https://github.com/wazery/ratyrate)
 * [Devise Gem](https://github.com/plataformatec/devise)
-* [Rails4-autocomplete Gem](https://github.com/peterwillcn/rails4-autocomplete) 
+* [Rails4-autocomplete Gem](https://github.com/peterwillcn/rails4-autocomplete)
 * HTML5/CSS3
 
 ##Future Considerations
-* Use an external API to store names of all existing games into the database
-* Integrate autofill feature so that users don't have to type the whole name of the game
+* ~~Use an external API to store names of all existing games into the database~~
+* ~~Integrate autofill feature so that users don't have to type the whole name of the game~~
 * Integrate an info page for each game.
+
+##Update 1.1 27/7/2016
+* Seeded a massive list of games into postgreSQL
+* Implemented an autofill feature when users try to add a game
