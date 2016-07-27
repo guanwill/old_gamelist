@@ -23,6 +23,7 @@ There are indeed a lot of websites out there that provide similar features, howe
 * [Devise Gem](https://github.com/plataformatec/devise)
 * [Rails4-autocomplete Gem](https://github.com/peterwillcn/rails4-autocomplete)
 * HTML5/CSS3
+* Google Fonts
 
 ##Future Considerations
 * ~~Use an external API to store names of all existing games into the database~~

@@ -6,7 +6,9 @@ end
 
 post '/rate' => 'rater#create', :as => 'rate'
 devise_for :users
+# devise_for :users, :controllers => {:registrations => "my_devise/registrations"}
 root to: "about#about"
+# root to: "games#index"
 
 resources :games
 get '/plan' => 'games#plan'
