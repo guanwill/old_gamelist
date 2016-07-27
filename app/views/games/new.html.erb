@@ -7,10 +7,9 @@
 <div id='game-container'>
 <%= form_for :game, url: games_path do |f| %>
   Title: <br />
-  <%= f.text_field :title %> <br /><br />
-  <!--create select drop down button. selection defined in game model -->
+  <%= f.autocomplete_field :title, autocomplete_gamesapi_name_games_path, :update_elements => {} %> <br /><br />
   Genre: <br />
-  <%= f.collection_select :genre, Game::GENRES, :to_s, :to_s, :include_blank => true %> <br /><br />
+  <%= f.collection_select :genre, Game::GENRES, :to_s, :to_s, :include_blank => true %> <br /><br />   <!--create select drop down button. selection defined in game model -->
   Platform: <br />
   <%= f.collection_select :platform, Game::PLATFORMS, :to_s, :to_s, :include_blank => true%> <br /><br />
   Progress (%): <br />

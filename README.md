@@ -19,8 +19,9 @@ There are indeed a lot of websites out there that provide similar features, howe
 * Ruby on Rails
 * Postgresql
 * Bootstrap CSS
-* RatyRate Gem
-* Devise Gem (Authentication)
+* [RatyRate Gem](https://github.com/wazery/ratyrate)
+* [Devise Gem](https://github.com/plataformatec/devise)
+* [Rails4-autocomplete Gem](https://github.com/peterwillcn/rails4-autocomplete) 
 * HTML5/CSS3
 
 ##Future Considerations

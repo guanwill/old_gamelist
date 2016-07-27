@@ -11,6 +11,8 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui/autocomplete
+//= require autocomplete-rails
 //= require jquery_ujs
 // require turbolinks
 //= require jquery.raty

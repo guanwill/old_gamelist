@@ -1,6 +1,8 @@
 class GamesController < ApplicationController
 # make sure user is logged in order to view their games list
 before_action :authenticate_user!
+autocomplete :gamesapi, :name, :full => true
+
 
 def index
   @games = Game.average(:rating)
@@ -41,7 +43,7 @@ end
 def update
   @game = Game.find(params[:id])
   @game.update(game_params)
-  # if game progress is above 0% and below 100%, direct to current playing. If it is 100
+  # if game progress is above 0% and below 100%, direct to current playing. If it is 100, direct to complete. if its 0, direct to planning to play
   if @game.valid? && @game.progress != 100 && @game.progress != 200 && @game.progress != 0
     redirect_to games_path
   elsif @game.valid? && @game.progress == 100 || @game.progress == 200

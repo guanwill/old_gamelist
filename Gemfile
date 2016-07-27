@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'rails4-autocomplete'
+gem 'jquery-ui-rails'
+
 gem 'httparty'
 gem 'devise'
 gem 'ratyrate'
