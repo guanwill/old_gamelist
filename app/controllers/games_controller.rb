@@ -3,7 +3,6 @@ class GamesController < ApplicationController
 before_action :authenticate_user!
 autocomplete :gamesapi, :name, :full => true
 
-
 def index
   @games = Game.average(:rating)
   # @gamelist = HTTParty.get "http://www.giantbomb.com/api/games/?api_key=cf71909f53e1497132eb781d7aab4d0936bfb352&format=json&field_list=name&offset=100"

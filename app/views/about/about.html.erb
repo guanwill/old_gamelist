@@ -1,12 +1,42 @@
 <div class="welcome-div">
 
 <h1 class="welcome-title"> Welcome! </h1>
+<p class="welcome-p"> Click me to browse games</p>
+<!-- <img class="welcome-img" src="https://s32.postimg.org/r6eopn00l/controller.png" alt=""> -->
+<!-- Trigger Modal -->
+<button class="welcome-img" type="button" data-toggle="modal" data-target="#myModal">
+  <img src="https://s32.postimg.org/r6eopn00l/controller.png" alt="">
+</button>
 
-<img class="welcome-img" src="https://s32.postimg.org/r6eopn00l/controller.png" alt="">
+
+<!-- Modal -->
+<div class="modal fade " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+
+      <div class="modal-body api_form_modal">
+        <p class="modal-p"> Looking for information on a game? Here is the right place. </p>
+        <!-- <form class="api_form" action = "/search" method = "POST" target="_blank"> -->
+        <form class="api_form" action = "/search" method = "POST">
+          <input data-autocomplete="/games/autocomplete_gamesapi_name" data-update-elements="{}" type="text" name="gameName" class="ui-autocomplete-input gamename-input" autocomplete="off", placeholder="Search for a game">
+          <button class="btn btn-primary" type="submit" name="button" >Search</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 
 <!-- <p class="welcome-paragraph"> Looking for a simple interface to keep track of your video games? If so, then look no further! My Games List is a super user-friendly app for gamers to record all the games that they want to play, planning to play, or have already finished playing, as well as the progress for each game. Sign up now and check it out!</p> -->
 
-<p class="welcome-paragraph"> My Games List is a super user-friendly app for gamers to record all the games that they want to play, are currently playing, or have already finished playing, as well as the progress for each game. If you are using this app or decide to use this app to track your video games, we hope that you like the neat and simple interface :) </p>
 
 
 </div>
+<p class="welcome-paragraph"> My Games List is a super user-friendly app for gamers to record all the games that they want to play, are currently playing, or have already finished playing, as well as the progress for each game. If you are using this app or decide to use this app to track your video games, we hope that you like the neat and simple interface :) </p>
+
+<!-- <form class="api_form" action = "/search" method = "POST">
+  <input data-autocomplete="/games/autocomplete_gamesapi_name" data-update-elements="{}" type="text" name="gameName" class="ui-autocomplete-input" autocomplete="off">
+  <button class="search_button" type="submit" name="button" >Search</button>
+</form> -->

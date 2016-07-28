@@ -125,11 +125,19 @@
   font-family: 'Press Start 2P', sans-serif;
   padding: 40px;
   color: rgb(56, 76, 145);
+  font-size: 80px;
+}
+.welcome-p {
+  text-align: center;
+  font-family: 'raleway', sans-serif;
+  margin: 0;
+  color: rgb(57, 97, 191);
+  // font-weight: bold;
 }
 .welcome-paragraph {
   text-align: center;
   margin: 0 auto;
-  width: 50%;
+  width: 48%;
   font-size: 20px;
 }
 .welcome-div {
@@ -139,4 +147,40 @@
   display: block;
   margin: 0 auto;
   margin-bottom: 50px;
+  background: none;
+  border: none;
+}
+.ui-autocomplete {
+  z-index: 9999 !important;
+}
+.welcome-img:focus {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  color: white;
+}
+.welcome-img:visited {
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+.welcome-img:visited:focus {
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+.modal {
+  margin-top: 10%;
+}
+.api_form_modal {
+  text-align: center;
+}
+.gamename-input {
+  width: 50%;
+  padding: 5px;
+  margin: 10px;
+}
+.modal-p {
+  // font-family: 'raleway', sans-serif;
+  font-size: 18px;
 }
