@@ -15,19 +15,19 @@
 #     })
 #   end
 
-require('httparty')
+# require('httparty')
 
 # --------GET GAME LIST API---------
-@game_array = []
-
-i = 1
-while i <= 20 do
-  @game_array.push((HTTParty.get "http://www.giantbomb.com/api/game/3030-#{i}/?api_key=cf71909f53e1497132eb781d7aab4d0936bfb352&format=json")["results"]["name"])
-  i+=1
-end
-
-for i in 0..@game_array.length
-  game = Gamesapi.create(name: @game_array[i])
-end
-
-@gamelist = HTTParty.get "http://www.giantbomb.com/api/games/?api_key=cf71909f53e1497132eb781d7aab4d0936bfb352&format=json&field_list=name&offset=100"
+# @game_array = []
+#
+# i = 1
+# while i <= 20 do
+#   @game_array.push((HTTParty.get "http://www.giantbomb.com/api/game/3030-#{i}/?api_key=cf71909f53e1497132eb781d7aab4d0936bfb352&format=json")["results"]["name"])
+#   i+=1
+# end
+#
+# for i in 0..@game_array.length
+#   game = Gamesapi.create(name: @game_array[i])
+# end
+#
+# @gamelist = HTTParty.get "http://www.giantbomb.com/api/games/?api_key=cf71909f53e1497132eb781d7aab4d0936bfb352&format=json&field_list=name&offset=100"

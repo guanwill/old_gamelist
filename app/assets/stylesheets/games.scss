@@ -203,7 +203,7 @@
   font-family: 'Raleway', sans-serif;
   // font-weight: bold;
   // color: rgb(61, 61, 61);
-  // font-size: 40px;
+  font-size: 40px;
 
 }
 .api-paragraph {
@@ -241,9 +241,11 @@
   outline: none;
   border: none;
 }
+
 .jumbotron {
   display: block;
   margin: 0 auto;
-  width: 80%;
-  border-radius: 20px;
+  width: 75%;
+  border-radius: 10px;
+  text-align: center;
 }

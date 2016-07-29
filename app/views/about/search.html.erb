@@ -3,6 +3,11 @@
 <% @gameName["results"].each do |game| %>
 
   <h2 class="api-heading"> <%= game["name"] %> </h2>
+
+  <% game["platforms"].each do |platform| %>
+  <span class="platform-results"><%= platform["name"] %><br/></span>
+  <%end%>
+
   <% if game["image"] %>
     <img class="api-image" src="<%= game["image"]["small_url"]%>" alt="">
   <% end %>
@@ -26,9 +31,11 @@
   <%else%>
   <span class="api-date"> / -- </span>
   <%end%>
-</div><br/>
+  </div><br/>
 
   <p class="api-paragraph"> <%=strip_tags(game["deck"]) %></p> </br>
+
+  <hr>
 
 <%end%>
 </div>
