@@ -18,17 +18,22 @@ There are indeed a lot of websites out there that provide similar features, howe
 ##Technologies Used
 * Ruby on Rails
 * Postgresql
-* Bootstrap CSS
+* HTML5/CSS3/Bootstrap
+* Google Fonts
+* HTTParty
 * [RatyRate Gem](https://github.com/wazery/ratyrate)
 * [Devise Gem](https://github.com/plataformatec/devise)
 * [Rails4-autocomplete Gem](https://github.com/peterwillcn/rails4-autocomplete)
-* HTML5/CSS3
-* Google Fonts
+* [GiantBomb's API](http://www.giantbomb.com/api/)
 
 ##Future Considerations
 * ~~Use an external API to store names of all existing games into the database~~
 * ~~Integrate autofill feature so that users don't have to type the whole name of the game~~
-* Integrate an info page for each game.
+* ~~Integrate an info page for each game.~~
+
+##Update 1.2 29/7/2016
+* Incorporated GiantBomb's API so users can search for information on any game
+* Users can search for games by clicking on the search icon in the nav bar or joystick icon on the home page
 
 ##Update 1.1 27/7/2016
 * Seeded a csv file with a massive list of games into postgreSQL
