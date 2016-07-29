@@ -13,7 +13,8 @@ There are indeed a lot of websites out there that provide similar features, howe
 ##Features
 * Users are required to create an account in order to view and create their own list
 * Users are also able to edit and delete their individual game entries
-* Users can specify a progress percentage for each game they have on their list
+* Users can specify a progress percentage for each game that they have on their list
+* Users can also specify a game's release date and platform if they choose to
 * Games are categorized into three categories: Planning to play, Currently playing, and finished playing
 * Users can search for information on a particular game
 
