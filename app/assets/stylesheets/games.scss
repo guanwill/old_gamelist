@@ -9,6 +9,7 @@
 
 .navbar {
   background: rgb(51, 27, 103);
+  width: 100%;
 }
 
 .navbar-brand {
@@ -183,4 +184,70 @@
 .modal-p {
   // font-family: 'raleway', sans-serif;
   font-size: 18px;
+}
+//--SEARCH RESULTS--
+.api-image {
+  // width: 300px;
+  height: 300px;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+.api-heading {
+  text-align: center;
+  margin: 25px;
+  // margin-top: 50px;
+  font-family: 'Raleway', sans-serif;
+  // font-weight: bold;
+  // color: rgb(61, 61, 61);
+  // font-size: 40px;
+
+}
+.api-paragraph {
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+  color: rgb(117, 117, 117);
+}
+
+.release_date_div {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+//below is the css for the search icon in the nav bar
+.welcome-img2 {
+  display: block;
+  background: none;
+  border: none;
+}
+.welcome-img2:focus {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  color: white;
+}
+.welcome-img2:visited {
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+.welcome-img2:visited:focus {
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+.jumbotron {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  border-radius: 20px;
+}
+.jumbo-bg {
+  background: rgba(187, 235, 86, 0.61);
+  z-index: 99999;
 }

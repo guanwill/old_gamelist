@@ -5,6 +5,10 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- To make it mobile-like -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <!-- To make mobile chrome browser a specific color  -->
+  <!-- <meta name="theme-color" content="#YOUR_COLOUR_HERE">  -->
   <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
@@ -21,6 +25,10 @@
         <li><% if current_user %>
           <ul class="nav navbar-nav navbar-right">
           <% if current_user %>
+
+          <button class="welcome-img2 navbar-brand" type="button" data-toggle="modal" data-target="#myModal">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          </button>
 
           <%= link_to games_path, class: 'navbar-brand' do %>
             <span class="glyphicon glyphicon-expand" aria-hidden="true"></span>
@@ -48,6 +56,10 @@
           <%end%>
 
         <% else %>
+          <!-- <button class="welcome-img2 navbar-brand" type="button" data-toggle="modal" data-target="#myModal">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          </button> -->
+
           <%= link_to new_user_session_path, class: 'navbar-brand' do %>
             <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
           <%end%>
@@ -56,11 +68,30 @@
             <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
           <%end%>
         <% end %>
+
       </ul>
     </div>
   </nav>
 
+  <!-- Modal to search for game -->
+  <div class="modal fade " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
 
+        <div class="modal-body api_form_modal">
+          <p class="modal-p"> Looking for information on a game? Here is the right place. </p>
+          <!-- <form class="api_form" action = "/search" method = "POST" target="_blank"> -->
+          <form class="api_form" action = "/search" method = "POST">
+            <input data-autocomplete="/games/autocomplete_gamesapi_name" data-update-elements="{}" type="text" name="gameName" class="ui-autocomplete-input gamename-input" autocomplete="off", placeholder="Search for a game">
+            <button class="btn btn-primary" type="submit" name="button" >Search</button>
+          </form>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
 
 <%= yield %>
 
