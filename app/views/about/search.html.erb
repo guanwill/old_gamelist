@@ -4,8 +4,10 @@
 
   <h2 class="api-heading"> <%= game["name"] %> </h2>
 
+  <% if game["platforms"] %>
   <% game["platforms"].each do |platform| %>
   <span class="platform-results"><%= platform["name"] %><br/></span>
+  <%end%>
   <%end%>
 
   <% if game["image"] %>
@@ -33,8 +35,10 @@
   <%end%>
   </div><br/>
 
+  <%if game["deck"]%>
   <p class="api-paragraph"> <%=strip_tags(game["deck"]) %></p> </br>
-
+  <%end%>
+  
   <hr>
 
 <%end%>
