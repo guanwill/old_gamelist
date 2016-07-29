@@ -4,7 +4,7 @@
 Heroku: https://stark-retreat-73573.herokuapp.com/
 
 ##Purpose
-* Tracks the status of all your video games 
+* Tracks the status of all your video games
 * Search for information on any game that you want
 
 ##Inspiration
@@ -32,7 +32,7 @@ There are indeed a lot of websites out there that provide similar features, howe
 ##Future Considerations
 * ~~Use an external API to store names of all existing games into the database~~
 * ~~Integrate autofill feature so that users don't have to type the whole name of the game~~
-* ~~Integrate an info page for each game.~~
+* Integrate an info page for each game
 
 ##Update 1.2 29/7/2016
 * Incorporated GiantBomb's API so users can search for information on any game
