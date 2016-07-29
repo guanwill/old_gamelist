@@ -4,7 +4,7 @@
 Heroku: https://stark-retreat-73573.herokuapp.com/
 
 ##Purpose
-* Tracks the status of all the video games that you are playing
+* Tracks the status of all your video games 
 * Search for information on any game that you want
 
 ##Inspiration
