@@ -1,6 +1,6 @@
 class Game < ActiveRecord::Base
 
-  GENRES = ['Action', 'Adventure', 'RPG', 'Simulation', 'Strategy', 'Sports', 'Others']
+  GENRES = ['Action', 'Adventure', 'RPG', 'Simulation', 'Strategy', 'Sports', 'FPS', 'Novel', 'Others']
   PLATFORMS = ['3DS', 'WII U', 'NX', 'PC', 'Playstation', 'XBOX', 'PS Vita', 'Mobile', 'Others']
   PROGRESS = [0, 25, 50, 75, 100, 200]
 
