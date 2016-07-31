@@ -29,7 +29,11 @@
   </div>
 </div>
 
-<p class="welcome-paragraph"> My Games List is a super user-friendly app for gamers to record all the games that they want to play, are currently playing, or have already finished playing, as well as the progress for each game. If you are using this app or decide to use this app to track your video games, we hope that you like the neat and simple interface :) </p>
+<p class="welcome-paragraph"> My Games List is a super user-friendly app for gamers to record all the games that they want to play, are currently playing, or have already finished playing, as well as the progress for each game. If you are using this app or decide to use this app to track your video games, we hope that you like the neat and simple interface :) </p><br/>
+
+<% if !user_signed_in? %>
+<p class="welcome-paragraph"> Click <%=link_to "here", new_user_registration_path%> to sign up or <%=link_to "here", new_user_session_path%> to login.
+<%end%>
 <!-- <p class="welcome-paragraph"> Looking for a simple interface to keep track of your video games? If so, then look no further! My Games List is a super user-friendly app for gamers to record all the games that they want to play, planning to play, or have already finished playing, as well as the progress for each game. Sign up now and check it out!</p> -->
 
 <!-- <form class="api_form" action = "/search" method = "POST">
