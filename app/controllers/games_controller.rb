@@ -1,19 +1,35 @@
 class GamesController < ApplicationController
-# make sure user is logged in order to view their games list
-before_action :authenticate_user!
 autocomplete :gamesapi, :name, :full => true
+
+# make sure user is logged in order to view their games list
+# before_action :authenticate_user!
 
 def index
   @games = Game.average(:rating)
   # @gamelist = HTTParty.get "http://www.giantbomb.com/api/games/?api_key=cf71909f53e1497132eb781d7aab4d0936bfb352&format=json&field_list=name&offset=100"
+  if user_signed_in?
+    render 'index'
+  else
+    redirect_to new_user_session_path
+  end
 end
 
 def plan
   @games = Game.average(:rating)
+  if user_signed_in?
+    render 'plan'
+  else
+    redirect_to new_user_session_path
+  end
 end
 
 def completed
   @games = Game.average(:rating)
+  if user_signed_in?
+    render 'completed'
+  else
+    redirect_to new_user_session_path
+  end
 end
 
 def create
