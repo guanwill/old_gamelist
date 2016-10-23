@@ -10,6 +10,7 @@
 .navbar {
   background: rgb(51, 27, 103);
   width: 100%;
+  border-radius: 0 !important;
 }
 
 .navbar-brand {
@@ -21,6 +22,36 @@
   -moz-animation: neon1 1.5s ease-in-out infinite alternate;
   animation: neon1 1.5s ease-in-out infinite alternate;
   font-family: 'Press Start 2P', cursive;
+}
+
+.dropdown-game-menu {
+  min-width: 65px!important;
+}
+
+.dropdown-game-menu .dropdown-item {
+  text-align: center;
+  color: #422895;
+}
+
+.fa-gamepad {
+  font-size: 22px !important;
+}
+
+.navbar-right .dropdown-menu {
+  right: auto !important;
+  left: auto;
+}
+
+@media (min-width: 768px) {
+  .navbar-right {
+      float: right !important;
+      margin-right: 0px !important;
+  }
+
+  .navbar-right .dropdown-menu {
+    right: auto !important;
+    left: auto;
+  }
 }
 
 /*glow*/
@@ -56,12 +87,18 @@
 #h1-playing {
   text-align: center;
   margin: 50px;
+  margin-bottom: 25px;
+  font-size: 29px !important;
 }
 
 #index-container   {
-  width: 70%;
+  width: 85%;
   display: block;
   margin: 0 auto;
+}
+
+#index-container table td {
+  padding: 3px !important;
 }
 
 .add-game-container {
@@ -77,12 +114,18 @@
 #h1-plan {
   text-align: center;
   margin: 50px;
+  margin-bottom: 25px;
+  font-size: 29px !important;
 }
 
 #plan-container   {
-  width: 70%;
+  width: 85%;
   display: block;
   margin: 0 auto;
+}
+
+#plan-container table td {
+  padding: 3px !important;
 }
 
 .add-game-container {
