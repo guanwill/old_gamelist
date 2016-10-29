@@ -5,7 +5,7 @@
 <!-- <img class="welcome-img" src="https://s32.postimg.org/r6eopn00l/controller.png" alt=""> -->
 <!-- Trigger Modal -->
 <button class="welcome-img" type="button" data-toggle="modal" data-target="#myModal">
-  <img src="https://s32.postimg.org/r6eopn00l/controller.png" alt="">
+  <img src="images/controller.png" alt="">
 </button>
 
 
@@ -30,7 +30,7 @@
 </div>
 
 <% if !user_signed_in? %>
-<p class="welcome-paragraph"> Need a super duper simple website to track your games? Then, look no further! <br/>Click <%=link_to "here", new_user_registration_path%> to sign up or <%=link_to "here", new_user_session_path%> to login.</p>
+<p style="margin-bottom: 20px;" class="welcome-paragraph"> Need a super duper simple website to track your games? Then, look no further! Click <%=link_to "here", new_user_registration_path%> to sign up or <%=link_to "here", new_user_session_path%> to login.</p>
 <%else%>
 <p class="welcome-paragraph"> We hope you are enjoying My Games List. Our team will ensure that you continue to experience the most neat and simple interface for tracking your games.</p>
 <%end%>

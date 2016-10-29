@@ -177,6 +177,31 @@
   }
 }
 
+@media (max-width: 736px) {
+  #index-container table tr th[data-field="rating"], #index-container table tr td:nth-child(6) {
+    display: none;
+  }
+  #index-container table tr th[data-field="genre"], #index-container table tr td:nth-child(2) {
+    display: none;
+  }
+  #index-container table tr th[data-field="platform"], #index-container table tr td:nth-child(3) {
+    display: none;
+  }
+  #index-container table tr th[data-field="release_date"], #index-container table tr td:nth-child(5) {
+    display: none;
+  }
+
+  #plan-container table tr th[data-field="rating"], #plan-container table tr td:nth-child(6) {
+    display: none;
+  }
+  #plan-container table tr th[data-field="genre"], #plan-container table tr td:nth-child(2) {
+    display: none;
+  }
+  #plan-container table tr th[data-field="platform"], #plan-container table tr td:nth-child(3) {
+    display: none;
+  }
+}
+
 @media (max-width: 500px) {
   .navbar-right {
     // float: left;
@@ -208,7 +233,6 @@
     width: 75%;
     font-size: 15px;
   }
-
   // EDIT PROFILE PAGE
   .edit_form {
     text-align: center;
@@ -244,6 +268,12 @@
     width: 70%;
   }
 
+}
+
+@media (max-width: 414px) {
+  #plan-container table tr td:nth-child(4),  #index-container table tr td:nth-child(4) {
+    text-align: center;
+  }
 }
 
 @media (max-width: 333px) {
