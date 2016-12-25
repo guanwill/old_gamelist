@@ -47,6 +47,11 @@ a:hover {
   text-shadow: none !important;
   animation: none !important;
   transition: none !important;
+  -webkit-text-shadow: none !important;
+  -moz-text-shadow: none !important;
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+
 }
 
 .dropdown-menu {
