@@ -299,7 +299,14 @@ a:hover {
 }
 .ui-autocomplete {
   z-index: 9999 !important;
+  width: auto !important;
+  margin: 0 auto !important;
+
 }
+.ui-menu-item {
+  // width: 268px !important;
+}
+
 .welcome-img:focus {
   text-decoration: none;
   outline: none;
