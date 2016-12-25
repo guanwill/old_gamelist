@@ -47,7 +47,7 @@ def create
     # render Rails.application.routes.recognize_path(request.referer)[:action]
     else
       # render edit_game_path
-      redirect_to :back, notice: '*Game was not added successfully'
+      redirect_to :back, notice: '*Game was not added successfully. Check required fields or enter a unique game title.'
     end
 end
 

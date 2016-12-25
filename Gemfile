@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'httparty'
-gem 'rails4-autocomplete'
+# gem 'rails4-autocomplete'
 gem 'jquery-ui-rails'
 
 gem 'httparty'

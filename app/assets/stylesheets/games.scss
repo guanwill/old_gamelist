@@ -47,7 +47,18 @@ a:hover {
   text-shadow: none !important;
   animation: none !important;
   transition: none !important;
+}
+
+.dropdown-menu {
   text-shadow: none !important;
+  animation: none !important;
+  transition: none !important;
+}
+
+.dropdown-menu > ul {
+  text-shadow: none !important;
+  animation: none !important;
+  transition: none !important;
 }
 
 .navbar-navright:hover {
