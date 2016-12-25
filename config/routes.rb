@@ -16,5 +16,4 @@ get '/completed' => 'games#completed'
 get '/about' => 'about#about'
 post '/search' => 'about#search'
 
-
 end

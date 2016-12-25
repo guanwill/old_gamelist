@@ -24,39 +24,22 @@
       </div>
 
       <ul class="nav navbar-nav navbar-right">
-          <% if current_user %>
+        <% if current_user %>
 
-          <!-- dropdown for currentplaying, plan to play, completed games -->
-          <a  href="#" class="navbar-brand" id="dropdownGameMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <!-- <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> -->
-            <i class="fa fa-gamepad" aria-hidden="true"></i>
-          </a>
+                <!-- Link to Games' list -->
+                <div class="btn-group">
+                  <%= link_to games_path, class: 'gamepad-a' do %>
+                  <i class="fa fa-gamepad" aria-hidden="true"></i>
+                  <%end%>
+                </div>
 
-          <ul class="dropdown-menu dropdown-game-menu" aria-labelledby="dropdownGameMenu">
-            <li>
-              <%= link_to games_path, class: 'dropdown-item' do %>
-                <span class="glyphicon glyphicon-expand" aria-hidden="true"></span>
-              <%end%>
-            </li>
-            <li>
-              <%= link_to plan_path, class: 'dropdown-item' do %>
-                <span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
-              <%end%>
-            </li>
-            <li>
-              <%= link_to completed_path, class: 'dropdown-item' do %>
-                <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
-              <%end%>
-            </li>
-          </ul>
-
-          <%= link_to new_game_path, class: 'navbar-brand' do %>
+          <!-- <%= link_to new_game_path, class: 'navbar-brand' do %>
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-          <%end%>
+          <%end%> -->
 
-          <button class="welcome-img2 navbar-brand" type="button" data-toggle="modal" data-target="#myModal">
+          <!-- <button class="welcome-img2 navbar-brand" type="button" data-toggle="modal" data-target="#myModal">
             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-          </button>
+          </button> -->
 
           <!-- <%= link_to games_path, class: 'navbar-brand' do %>
             <span class="glyphicon glyphicon-expand" aria-hidden="true"></span>
@@ -72,39 +55,63 @@
         <%end%>
 
         <% if user_signed_in? %>
-          <%= link_to edit_user_registration_path, class: 'navbar-brand' do %>
+          <div class="btn-group">
+            <a  href="#" class="navbar-brand nav-dropdown" id="dropdownAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            </a>
+
+            <ul class="dropdown-menu dropdown-game-menu" aria-labelledby="dropdownAccount">
+              <li>
+                <%= link_to edit_user_registration_path, class: 'navbar-brand navbar-navright' do %>
+                  <!-- <span class="glyphicon glyphicon-user" aria-hidden="true"></span> -->
+                  My Account
+                <%end%>
+              </li>
+              <li>
+                <%= link_to destroy_user_session_path, :data => {:confirm => 'Are you sure you want to log out?'}, method: :delete, class: 'navbar-brand navbar-navright' do %>
+                  <!-- <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> -->
+                  Logout
+                <%end%>
+              </li>
+            </ul>
+          </div>
+
+          <!-- <%= link_to edit_user_registration_path, class: 'navbar-brand navbar-navright' do %>
             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            My Account
           <%end%>
 
-          <%= link_to destroy_user_session_path, :data => {:confirm => 'Are you sure you want to log out?'}, method: :delete, class: 'navbar-brand' do %>
+          <%= link_to destroy_user_session_path, :data => {:confirm => 'Are you sure you want to log out?'}, method: :delete, class: 'navbar-brand navbar-navright' do %>
             <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
-          <%end%>
+            Logout
+          <%end%> -->
 
         <% else %>
           <!-- <button class="welcome-img2 navbar-brand" type="button" data-toggle="modal" data-target="#myModal">
             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
           </button> -->
 
-          <%= link_to new_user_session_path, class: 'navbar-brand' do %>
-            <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+          <%= link_to new_user_session_path, class: 'navbar-brand navbar-navright' do %>
+            <!-- <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>  -->
+            Login
           <%end%>
 
-          <%= link_to new_user_registration_path, class: 'navbar-brand' do %>
-            <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+          <%= link_to new_user_registration_path, class: 'navbar-brand navbar-navright' do %>
+            <!-- <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span> -->
+            Sign Up
           <%end%>
         <% end %>
-    </div>
+    <!-- </div> --> <!--end btn group-->
   </nav>
 
   <!-- Modal to search for game -->
-  <div class="modal fade " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <!-- <div class="modal fade " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
 
         <div class="modal-body api_form_modal">
           <p class="modal-p"> Looking for information on a game? Here is the right place. </p>
-          <!-- <form class="api_form" action = "/search" method = "POST" target="_blank"> -->
           <form class="api_form" action = "/search" method = "POST">
             <input data-autocomplete="/games/autocomplete_gamesapi_name" data-update-elements="{}" type="text" name="gameName" class="ui-autocomplete-input gamename-input" autocomplete="off", placeholder="Search for a game">
             <button class="btn btn-primary" type="submit" name="button" >Search</button>
@@ -114,7 +121,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 <%= yield %>
 

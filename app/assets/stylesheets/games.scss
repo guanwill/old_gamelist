@@ -2,18 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+a.navbar-brand:hover, a.navbar-brand:focus, a.navbar-brand:active {
+  color: rgb(84, 171, 219) !important;
+}
 
-.navbar-brand {
-  font-family: 'Press Start 2P', cursive;
+a:focus {
+  background: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+  border: none !important;
 }
 
 .navbar {
-  background: rgb(51, 27, 103);
+  // background: rgb(51, 27, 103);
+  background: #150832 !important;
   width: 100%;
   border-radius: 0 !important;
 }
 
 .navbar-brand {
+  font-size: 14px !important;
   color: #fff;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -22,10 +32,24 @@
   -moz-animation: neon1 1.5s ease-in-out infinite alternate;
   animation: neon1 1.5s ease-in-out infinite alternate;
   font-family: 'Press Start 2P', cursive;
+  padding: 15px 10px !important;
+  margin-left: auto !important;
+}
+
+.navbar-navright {
+  color: white;
+  font-family: 'Raleway';
+  text-shadow: none !important;
+  animation: none !important;
+  transition: none !important;
+}
+
+.navbar-navright:hover {
+  // border-bottom: 3px solid #337ab7;
 }
 
 .dropdown-game-menu {
-  min-width: 65px!important;
+  min-width: 100px!important;
 }
 
 .dropdown-game-menu .dropdown-item {
@@ -33,12 +57,44 @@
   color: #422895;
 }
 
+.dropup, .dropdown {
+    position: relative;
+    // float: left;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > li > a:visited {
+  background: none !important;
+}
+
+.dropdown-menu.dropdown-game-menu > li {
+  padding-left: 20px;
+  padding-right: 20px;;
+}
+
+.btn-group {
+  margin-left: 10px;
+}
+
 .fa-gamepad {
-  font-size: 22px !important;
+  font-size: 27px !important;
+  color: white !important;
+}
+
+.fa-gamepad:hover {
+  color: #54abdb !important;
+}
+
+.fa {
+  outline-style: none !important;
+}
+
+.glyphicon.glyphicon-user {
+  font-size: 19px !important;
+  text-shadow: none;
 }
 
 .navbar-right .dropdown-menu {
-  right: auto !important;
+  right: 0 !important;
   left: auto;
 }
 
@@ -49,8 +105,9 @@
   }
 
   .navbar-right .dropdown-menu {
-    right: auto !important;
+    right: 0 !important;
     left: auto;
+
   }
 }
 
@@ -75,7 +132,7 @@
 }
 
 .navbar-brand:hover {
-  color: rgb(23, 181, 134);
+  // color: rgb(23, 181, 134);
 }
 
 .nav-name > a {
@@ -131,7 +188,7 @@
 .add-game-container {
   display: block;
   text-align: center;
-  margin: 40px;
+  margin: 11px;
 }
 .add-game {
   text-align: center;
@@ -145,33 +202,55 @@
 #game-container   {
   // width: 70%;
   display: block;
-  margin: 0 auto;
+  margin: 14px auto;
   text-align: center;
 }
 
 #game_title{
-  width: 300px;
+  width: 268px;
   text-align: center;
   margin-top: 10px;
 }
+
 #game_genre, #game_platform, #game_progress, #game_release_date{
-  width: 150px;
+  width: 268px;
   text-align: center;
   margin-top: 10px;
 }
+
 #game_release_date {
   border-radius: 7px;
 }
 
 .add_game_button {
   margin-bottom: 20px !important;
+  margin-top: 6px;
 }
+
+.panel-default > .panel-heading {
+  font-weight: bold;
+  // background: none !important;
+  background: #193892 !important;
+  color: white !important;
+  // border: 1px solid #193892 !important;
+}
+
+.modal-header {
+  background: #193892;
+  color: white;
+  border: 0 !important;
+}
+
+.close {
+  color: white !important;
+}
+
 
 //--ABOUT/HOME PAGE--//
 .welcome-title {
   text-align: center;
   font-family: 'Press Start 2P', sans-serif;
-  padding: 40px;
+  padding: 10px;
   color: rgb(56, 76, 145);
   font-size: 80px;
 }
@@ -184,12 +263,15 @@
 }
 .welcome-paragraph {
   text-align: center;
-  margin: 0 auto;
-  width: 48%;
-  font-size: 20px;
+  margin: 10px auto;
+  margin-bottom: 40px;
+  width: 40%;
+  font-size: 12px;
 }
 .welcome-div {
-  margin-top: 120px;
+    position: absolute;
+    top: 30%;
+    width: 100%;
 }
 .welcome-img {
   display: block;
@@ -218,21 +300,35 @@
   border: none;
 }
 .modal {
-  margin-top: 10%;
+  margin-top: 7%;
 }
 .api_form_modal {
   text-align: center;
 }
 .gamename-input {
-  width: 50%;
-  padding: 5px;
+  width: 40%;
+  padding: 10px;
   margin: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(43, 98, 133);
+  text-align: center;
 }
 .modal-p {
   // font-family: 'raleway', sans-serif;
   font-size: 18px;
 }
-//--SEARCH RESULTS--
+
+
+//--SEARCH FORM AND SEARCH RESULTS--
+.api_form {
+  text-align: center;
+}
+
+.btn-primary {
+  padding: 11px 20px 11px !important;
+  vertical-align: baseline !important;
+}
+
 .api-image {
   // width: 300px;
   height: 300px;
@@ -292,11 +388,100 @@
 .jumbotron {
   display: block;
   margin: 0 auto;
-  width: 75%;
+  // width: 75%;
+  width: 90%;
   border-radius: 10px;
   text-align: center;
+  border: 1px solid black;
 }
 
 #plan-container, #index-container {
   margin-bottom: 70px;
+}
+
+// GAME PAGE
+.panel {
+  margin: 30px;
+  border-radius: 10px !important;
+  // background: #150832 !important;
+  min-height: 500px;
+}
+.table {
+  border-left: 1px solid #193892;
+  border-right: 1px solid #193892;
+  border-bottom: 1px solid #193892;
+}
+.table-responsive {
+  min-height: 400px !important;
+  background: white;
+  border: 0 !important;
+}
+.content-wrapper {
+  padding: 20px;
+}
+
+// Tables
+.table th {
+  background: #193892;
+  color: white;
+  border: 0 !important;
+}
+.table td {
+  border: 0 !important;
+}
+
+// Btn Default
+.btn-default {
+  color: #1868b1 !important;
+  font-weight: bold;
+  background-color: #fff;
+  border-color: #1868b1 !important;
+}
+.btn-default:hover {
+  background: #193892 !important;
+  color: white !important;
+}
+.btn-default:focus {
+  background: white !important;
+  outline-style: none;
+  color: #1868b1 !important;
+}
+
+// Nav Tabs
+.nav-tabs {
+  border-bottom: 0 !important;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus {
+  color: #1868b1 !important;
+  // background-color: #193892 !important;
+  border: 1px solid #193892 !important;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+.nav-tabs > li.active > a:hover {
+  color: white!important;
+}
+.nav-tabs > li > a {
+  // border-bottom: 1px solid #1868b1 !important;
+}
+.nav-tabs > li:hover > a {
+  // background: #e8deff !important;
+  background: #193892 !important;
+  color:white;
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+}
+
+.deleteGame {
+  margin-bottom: 20px;
+}
+
+input.addgamefield, select {
+  height: 35px;
+  border: 1px solid lightgrey;
+  text-align: center !important;
+  background: white !important;
+  border-radius: 2px !important;
 }

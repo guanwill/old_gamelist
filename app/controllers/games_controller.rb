@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-autocomplete :gamesapi, :name, :full => true
+# autocomplete :gamesapi, :name, :full => true
 
 # make sure user is logged in order to view their games list
 # before_action :authenticate_user!
