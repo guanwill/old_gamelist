@@ -123,6 +123,10 @@
     </div>
   </div> -->
 
+  <% if flash[:notice] %>
+    <p class="flash-notice"><%= flash[:notice] %></p>
+  <%end%>
+
 <%= yield %>
 
 </body>

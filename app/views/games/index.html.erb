@@ -14,13 +14,10 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 style="text-align:center" class="modal-title">Add Game</h4>
       </div>
-      <% if flash[:errors] %>
-        <p><%= flash[:errors] %></p>
-      <%end%>
 
       <div id='game-container'>
       <%= form_for :game, url: games_path do |f| %>
-        Title: <br />
+        Title:* <br />
         <%= f.autocomplete_field :title, autocomplete_gamesapi_name_games_path, :update_elements => {}, class: 'addgamefield' %> <br /><br />
         Genre: <br />
         <%= f.collection_select :genre, Game::GENRES, :to_s, :to_s, :include_blank => true %> <br /><br />   <!--create select drop down button. selection defined in game model -->
@@ -30,7 +27,7 @@
         <%= f.collection_select :progress, Game::PROGRESS, :to_s, :to_s%> <br /><br />
         Release Date: <br />
         <%= f.date_field :release_date, class: 'addgamefield' %> <br /><br />
-        <%= f.hidden_field :rating %> 
+        <%= f.hidden_field :rating %>
 
         <%= f.submit 'Add', class: 'btn btn-primary add_game_button' %>
       <%end%>
