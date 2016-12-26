@@ -335,6 +335,16 @@
     margin-top: 2px;
   }
 
+  //add game page
+  input.addgamefield, select {
+    height: 25px;
+    border: 1px solid lightgrey;
+    text-align: center !important;
+    background: white !important;
+    border-radius: 2px !important;
+    margin-top: 0px !important;
+  }
+
   //edit game page
   .panel {
     min-height: auto !important;
@@ -474,7 +484,7 @@
   }
 
   input.addgamefield, select {
-    height: 25px;
+    height: 20px;
     border: 1px solid lightgrey;
     text-align: center !important;
     background: white !important;
