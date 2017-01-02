@@ -125,7 +125,7 @@
         </thead>
 
         <tbody>
-          <% Game.all.each.sort_by(&:title).sort_by(&:platform).each do |game| %>
+          <% Game.all.order("title asc").each do |game| %>
             <%if current_user.id == game.user_id%>
                 <%if game.progress == '0%' %>
 
@@ -173,7 +173,7 @@
         </thead>
 
         <tbody>
-          <% Game.all.each do |game| %>
+          <% Game.all.order("title asc").each do |game| %>
             <%if current_user.id == game.user_id%>
                 <%if game.progress == 'Wish' %>
 
@@ -221,7 +221,7 @@
         </thead>
 
         <tbody>
-          <% Game.all.each do |game| %>
+          <% Game.all.order("title asc").each do |game| %>
             <%if current_user.id == game.user_id%>
                 <%if game.progress == '100%' || game.progress == '200%' %>
 
