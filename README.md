@@ -41,3 +41,7 @@ There are indeed a lot of websites out there that provide similar features, howe
 ##Update 1.1 27/7/2016
 * Seeded a csv file with a massive list of games into postgreSQL
 * Implemented an autofill feature when users try to add a game
+
+##Update 1.1 23/12/2016 - 2/1/2016
+* Re-designed website layout
+* Added sortable columns

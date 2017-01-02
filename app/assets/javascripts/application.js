@@ -17,4 +17,5 @@
 // require turbolinks
 //= require jquery.raty
 //= require ratyrate
+//= require bootstrap-table
 //= require_tree .

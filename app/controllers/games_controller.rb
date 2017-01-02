@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
 autocomplete :gamesapi, :name, :full => true
+helper_method :sort_column, :sort_direction
 
 # make sure user is logged in order to view their games list
 # before_action :authenticate_user!
@@ -94,6 +95,16 @@ def destroy
 end
 
 def show
+end
+
+private
+
+def sort_column
+  Game.column_names.include?(params[:sort]) ? params[:sort] : "name"
+end
+
+def sort_direction
+  %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
 end
 
 def game_params
