@@ -64,22 +64,37 @@
           <th data-sortable="true" class="col-sm-1.5" data-field="progress">Progress</th>
           <th data-sortable="true" class="col-sm-1.5" data-field="release_date">Release Date</th>
           <th data-sortable="true" class="col-sm-2" data-field="rating">Rating</th>
+          <th></th>
         </tr>
       </thead>
 
       <tbody>
-        <% Game.all.each do |game| %>
+        <% Game.all.order("title asc").each do |game| %>
           <%if current_user.id == game.user_id%>
               <%if game.progress != '0%' && game.progress != '100%' && game.progress != '200%' && game.progress != 'Wish' %>
 
                   <tr>
                     <!-- <td class="col-sm-2"><%= link_to game.title.capitalize, game %></td> -->
-                    <td class="col-sm-4"><%= link_to game.title, edit_game_path(game) %></td>
+                    <!-- <td class="col-sm-4"><%= link_to game.title, edit_game_path(game) %></td> -->
+                    <td class="col-sm-4">
+                      <%= game.title %>
+                      <!-- &nbsp<%= link_to edit_game_path(game), class: 'edit-title' do %>
+                        edit
+                      <%end%> -->
+                    </td>
+
                     <td class="col-sm-1.5"><%=game.genre%></td>
                     <td class="col-sm-1.5"><%=game.platform%></td>
                     <td class="col-sm-1.5"><%=game.progress%></td>
                     <td class="col-sm-1.5"><%=game.release_date%></td>
                     <td class="col-sm-2"><%=rating_for game, 'rating', star: 5, disable_after_rate: false, enable_half: true, cancel_place: 'right', star_path: '/images' %></td>
+
+                    <td>
+                      <%= link_to edit_game_path(game), class: 'edit-title' do %>
+                      <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                      <%end%>
+                    </td>
+
                   </tr>
 
               <%end%>
@@ -99,12 +114,13 @@
       <table data-toggle="table" class="table table-stripeddd table-hover">
         <thead>
           <tr>
-            <th data-sortable="true"  class="col-sm-4" data-field="title">Title</th>
+            <th data-sortable="true" class="col-sm-4" data-field="title">Title</th>
             <th data-sortable="true" class="col-sm-1.5" data-field="genre">Genre</th>
             <th data-sortable="true" class="col-sm-1.5" data-field="platform">Platform</th>
             <th data-sortable="true" class="col-sm-1.5" data-field="progress">Progress</th>
             <th data-sortable="true" class="col-sm-1.5" data-field="release_date">Release Date</th>
             <th data-sortable="true" class="col-sm-2" data-field="rating">Rating</th>
+            <th></th>
           </tr>
         </thead>
 
@@ -115,12 +131,18 @@
 
                     <tr>
                       <!-- <td class="col-sm-2"><%= link_to game.title.capitalize, game %></td> -->
-                      <td class="col-sm-4"><%= link_to game.title, edit_game_path(game) %></td>
+                      <!-- <td class="col-sm-4"><%= link_to game.title, edit_game_path(game) %></td> -->
+                      <td class="col-sm-4"><%= game.title %></td>
                       <td class="col-sm-1.5"><%=game.genre%></td>
                       <td class="col-sm-1.5"><%=game.platform%></td>
                       <td class="col-sm-1.5"><%=game.progress%></td>
                       <td class="col-sm-1.5"><%=game.release_date%></td>
                       <td class="col-sm-2"><%=rating_for game, 'rating', star: 5, disable_after_rate: false, enable_half: true, cancel_place: 'right', star_path: '/images' %></td>
+                      <td>
+                        <%= link_to edit_game_path(game), class: 'edit-title' do %>
+                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        <%end%>
+                      </td>
                     </tr>
 
                 <%end%>
@@ -146,6 +168,7 @@
             <th data-sortable="true" class="col-sm-1.5" data-field="progress">Progress</th>
             <th data-sortable="true" class="col-sm-1.5" data-field="release_date">Release Date</th>
             <th data-sortable="true" class="col-sm-2" data-field="rating">Rating</th>
+            <th></th>
           </tr>
         </thead>
 
@@ -156,12 +179,18 @@
 
                     <tr>
                       <!-- <td class="col-sm-2"><%= link_to game.title.capitalize, game %></td> -->
-                      <td class="col-sm-4"><%= link_to game.title, edit_game_path(game) %></td>
+                      <!-- <td class="col-sm-4"><%= link_to game.title, edit_game_path(game) %></td> -->
+                      <td class="col-sm-4"><%= game.title %></td>
                       <td class="col-sm-1.5"><%=game.genre%></td>
                       <td class="col-sm-1.5"><%=game.platform%></td>
                       <td class="col-sm-1.5"><%=game.progress%></td>
                       <td class="col-sm-1.5"><%=game.release_date%></td>
                       <td class="col-sm-2"><%=rating_for game, 'rating', star: 5, disable_after_rate: false, enable_half: true, cancel_place: 'right', star_path: '/images' %></td>
+                      <td>
+                        <%= link_to edit_game_path(game), class: 'edit-title' do %>
+                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        <%end%>
+                      </td>
                     </tr>
 
                 <%end%>
@@ -187,6 +216,7 @@
             <th data-sortable="true" class="col-sm-1.5" data-field="progress">Progress</th>
             <th data-sortable="true" class="col-sm-1.5" data-field="release_date">Release Date</th>
             <th data-sortable="true" class="col-sm-2" data-field="rating">Rating</th>
+            <th></th>
           </tr>
         </thead>
 
@@ -197,12 +227,18 @@
 
                     <tr>
                       <!-- <td class="col-sm-2"><%= link_to game.title.capitalize, game %></td> -->
-                      <td class="col-sm-4"><%= link_to game.title, edit_game_path(game) %></td>
+                      <!-- <td class="col-sm-4"><%= link_to game.title, edit_game_path(game) %></td> -->
+                      <td class="col-sm-4"><%= game.title%></td>
                       <td class="col-sm-1.5"><%=game.genre%></td>
                       <td class="col-sm-1.5"><%=game.platform%></td>
                       <td class="col-sm-1.5"><%=game.progress%></td>
                       <td class="col-sm-1.5"><%=game.release_date%></td>
                       <td class="col-sm-2"><%=rating_for game, 'rating', star: 5, disable_after_rate: false, enable_half: true, cancel_place: 'right', star_path: '/images' %></td>
+                      <td>
+                        <%= link_to edit_game_path(game), class: 'edit-title' do %>
+                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        <%end%>
+                      </td>
                     </tr>
 
                 <%end%>

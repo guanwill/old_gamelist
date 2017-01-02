@@ -99,6 +99,11 @@ a:hover {
   text-shadow: none;
 }
 
+.glyphicon-edit, .edit-title {
+  color: rgb(196, 196, 196) !important;
+  // font-size: 12px !important;
+}
+
 .navbar-right .dropdown-menu {
   right: 0 !important;
   left: auto;
@@ -445,6 +450,10 @@ a:hover {
 
 .fixed-table-container {
   border: 0 !important;
+}
+
+tr[data-link] {
+  cursor: pointer;
 }
 
 // Btn Default
