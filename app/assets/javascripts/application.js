@@ -19,12 +19,3 @@
 //= require ratyrate
 //= require bootstrap-table
 //= require_tree .
-
-$(function(){
-
-  $("tr[data-link][data-index]").on('click', function() {
-    window.location = $(this).data("link")
-  })
-
-
-})

@@ -71,7 +71,7 @@
       <tbody>
         <% Game.all.order("title asc").each do |game| %>
           <%if current_user.id == game.user_id%>
-              <%if game.progress != '0%' && game.progress != '100%' && game.progress != '200%' && game.progress != 'Wish' %>
+              <%if game.progress != '0%' && game.progress != '100%' && game.progress != '200%' && game.progress != 'Wish' && game.progress != 'Contemplating' %>
 
                   <tr>
                     <!-- <td class="col-sm-2"><%= link_to game.title.capitalize, game %></td> -->
@@ -175,7 +175,7 @@
         <tbody>
           <% Game.all.order("title asc").each do |game| %>
             <%if current_user.id == game.user_id%>
-                <%if game.progress == 'Wish' %>
+                <%if game.progress == 'Wish' || game.progress == 'Contemplating' %>
 
                     <tr>
                       <!-- <td class="col-sm-2"><%= link_to game.title.capitalize, game %></td> -->
