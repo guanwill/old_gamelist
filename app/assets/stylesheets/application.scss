@@ -94,6 +94,12 @@
 //   }
 // }
 
+@media (max-width: 1070px) {
+  .content-wrapper {
+    padding: 20px;
+  }
+}
+
 @media (max-width: 916px) {
   table tr th[data-field="rating"], table tr td:nth-child(6) {
     display: none;
@@ -211,6 +217,7 @@
     font-family: 'Raleway', sans-serif;
     font-size: 22px;
   }
+
 }
 
 @media (max-width: 736px) {

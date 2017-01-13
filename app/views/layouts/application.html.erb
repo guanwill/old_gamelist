@@ -2,7 +2,11 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Gamelist</title>
+  <% if current_user %>
+    <title><%= current_user.name.capitalize%>'s Gamelist</title>
+  <% else %>
+    <title>My Games list</title>
+  <% end %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
