@@ -518,3 +518,22 @@ input.addgamefield, select {
   background: white !important;
   border-radius: 2px !important;
 }
+
+// Disqus
+.disqus_accordion {
+  text-decoration: none;
+  text-align: center;
+}
+
+ .disqus_accordion_div {
+   width: 100%;
+   text-align: center;
+ }
+
+ a.disqus_accordion.collapsed:before {
+   content: 'Show comments'
+ }
+
+ a.disqus_accordion:before {
+   content: "Hide comments"
+ }

@@ -74,31 +74,10 @@
       <tbody>
         <% Game.all.order("title asc").each do |game| %>
           <%if current_user.id == game.user_id%>
-              <%if game.progress != '0%' && game.progress != '100%' && game.progress != '200%' && game.progress != 'Wish' && game.progress != 'Contemplating' %>
+              <%if game.progress != '0%' && game.progress != '100%' && game.progress != '200%' && game.progress != 'Wish' && game.progress != 'Contemplating' && game.progress != 'Paused' %>
 
-                  <tr>
-                    <!-- <td class="col-sm-2"><%= link_to game.title.capitalize, game %></td> -->
-                    <td class="col-sm-4"><%= link_to game.title, edit_game_path(game) %></td>
-                    <!-- <td class="col-sm-4">
-                      <%= game.title %>
-                      &nbsp<%= link_to edit_game_path(game), class: 'edit-title' do %>
-                        edit
-                      <%end%>
-                    </td> -->
+                <%= render partial: "games/table", locals: { game: game } %>
 
-                    <td class="col-sm-1.5"><%=game.genre%> </td>
-                    <td class="col-sm-1.5"><%=game.platform%></td>
-                    <td class="col-sm-1.5"><%=game.progress%></td>
-                    <td class="col-sm-1.5"><%=game.release_date%></td>
-                    <td class="col-sm-2"><%=rating_for game, 'rating', star: 5, disable_after_rate: false, enable_half: true, cancel_place: 'right', star_path: '/images' %></td>
-
-                    <!-- <td>
-                      <%= link_to edit_game_path(game), class: 'edit-title' do %>
-                      <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-                      <%end%>
-                    </td> -->
-
-                  </tr>
 
               <%end%>
           <%end%>
@@ -130,23 +109,10 @@
         <tbody>
           <% Game.all.order("title asc").each do |game| %>
             <%if current_user.id == game.user_id%>
-                <%if game.progress == '0%' %>
+                <%if game.progress == '0%' || game.progress == 'Paused' %>
 
-                    <tr>
-                      <!-- <td class="col-sm-2"><%= link_to game.title.capitalize, game %></td> -->
-                      <td class="col-sm-4"><%= link_to game.title, edit_game_path(game) %></td>
-                      <!-- <td class="col-sm-4"><%= game.title %></td> -->
-                      <td class="col-sm-1.5"><%=game.genre%></td>
-                      <td class="col-sm-1.5"><%=game.platform%></td>
-                      <td class="col-sm-1.5"><%=game.progress%></td>
-                      <td class="col-sm-1.5"><%=game.release_date%></td>
-                      <td class="col-sm-2"><%=rating_for game, 'rating', star: 5, disable_after_rate: false, enable_half: true, cancel_place: 'right', star_path: '/images' %></td>
-                      <!-- <td>
-                        <%= link_to edit_game_path(game), class: 'edit-title' do %>
-                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-                        <%end%>
-                      </td> -->
-                    </tr>
+                <%= render partial: "games/table", locals: { game: game } %>
+
 
                 <%end%>
 
@@ -180,21 +146,8 @@
             <%if current_user.id == game.user_id%>
                 <%if game.progress == 'Wish' || game.progress == 'Contemplating' %>
 
-                    <tr>
-                      <!-- <td class="col-sm-2"><%= link_to game.title.capitalize, game %></td> -->
-                      <!-- <td class="col-sm-4"><%= link_to game.title, edit_game_path(game) %></td> -->
-                      <td class="col-sm-4"><%= game.title %></td>
-                      <td class="col-sm-1.5"><%=game.genre%></td>
-                      <td class="col-sm-1.5"><%=game.platform%></td>
-                      <td class="col-sm-1.5"><%=game.progress%></td>
-                      <td class="col-sm-1.5"><%=game.release_date%></td>
-                      <td class="col-sm-2"><%=rating_for game, 'rating', star: 5, disable_after_rate: false, enable_half: true, cancel_place: 'right', star_path: '/images' %></td>
-                      <!-- <td>
-                        <%= link_to edit_game_path(game), class: 'edit-title' do %>
-                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-                        <%end%>
-                      </td> -->
-                    </tr>
+                <%= render partial: "games/table", locals: { game: game } %>
+
 
                 <%end%>
             <%end%>
@@ -228,21 +181,8 @@
             <%if current_user.id == game.user_id%>
                 <%if game.progress == '100%' || game.progress == '200%' %>
 
-                    <tr>
-                      <!-- <td class="col-sm-2"><%= link_to game.title.capitalize, game %></td> -->
-                      <!-- <td class="col-sm-4"><%= link_to game.title, edit_game_path(game) %></td> -->
-                      <td class="col-sm-4"><%= game.title%></td>
-                      <td class="col-sm-1.5"><%=game.genre%></td>
-                      <td class="col-sm-1.5"><%=game.platform%></td>
-                      <td class="col-sm-1.5"><%=game.progress%></td>
-                      <td class="col-sm-1.5"><%=game.release_date%></td>
-                      <td class="col-sm-2"><%=rating_for game, 'rating', star: 5, disable_after_rate: false, enable_half: true, cancel_place: 'right', star_path: '/images' %></td>
-                      <!-- <td>
-                        <%= link_to edit_game_path(game), class: 'edit-title' do %>
-                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-                        <%end%>
-                      </td> -->
-                    </tr>
+                <%= render partial: "games/table", locals: { game: game } %>
+
 
                 <%end%>
             <%end%>
@@ -255,6 +195,25 @@
   </div>
 
 </div>
+
+<div class="disqus_accordion_div">
+  <a class="disqus_accordion collapsed" href="#disqus" data-toggle="collapse"></a>
+</div>
+
+<!-- DISQUS -->
+<div id="disqus" class="collapse disqus_div">
+  <div id="disqus_thread"></div>
+  <script>
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = '//my-games-list.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+  </script>
+</div>
+
+
 
 </div> <!--end content wrapper-->
 
