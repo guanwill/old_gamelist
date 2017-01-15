@@ -4,9 +4,12 @@ gem 'httparty'
 gem 'rails4-autocomplete'
 gem 'jquery-ui-rails'
 
+gem 'momentjs-rails'
+gem 'rails_bootstrap_sortable'
+# gem 'bootstrap-table-rails'
+
 gem 'devise'
 gem 'ratyrate'
-gem 'bootstrap-table-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'materialize-sass'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

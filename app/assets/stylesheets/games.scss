@@ -456,6 +456,13 @@ tr[data-link] {
   cursor: pointer;
 }
 
+// bootstrap sortable table
+table.sortable > thead th:hover:not([data-defaultsort=disabled]) {
+  background: #193892 !important;
+  // color: #337ab7;
+  color: white !important;
+}
+
 // Btn Default
 .btn-default {
   color: #1868b1 !important;
