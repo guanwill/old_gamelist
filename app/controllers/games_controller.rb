@@ -15,6 +15,17 @@ def index
   end
 end
 
+def newindex
+  @current_user_id = current_user.id
+  @games = Game.where(:user_id => @current_user_id)
+  @user = User.find_by(:id => current_user.id)
+
+  # binding.pry
+  # use gon to display and watch for user's name
+  @watch_user_name = current_user.name + " 's Games List "
+  gon.watch.username = @watch_user_name
+end
+
 def plan
   @games = Game.average(:rating)
   if user_signed_in?

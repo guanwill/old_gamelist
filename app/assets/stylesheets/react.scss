@@ -1,0 +1,73 @@
+.title {
+  padding: 13px 0;
+  text-align: center;
+  // background: #fff;
+  // border: 3px solid #e9ebec;
+  // border-radius: 7px;
+  color: #1f63ab !important;
+}
+
+.navbar {
+  background: #193892 !important
+}
+
+.gameslist.container .btn.btn-default{
+  margin-right: 10px !important;
+  width: 100px;
+  margin-bottom: 10px !important;
+}
+
+.btn:focus, .btn.focus {
+  outline-style: none !important;
+}
+
+a.game_status_title, a.game_status_title:hover {
+    color: #337ab7;
+    // text-decoration: none;
+    margin-left: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #337ab7 !important;
+    cursor: pointer;
+}
+
+a.game_status_title:active, a.game_status_title:focus {
+  color: #58cc83 !important;
+}
+
+a.game_status_title_last,  a.game_status_title_last:hover {
+  color: #337ab7;
+  text-decoration: none;
+  margin-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  border-right: none !important;
+}
+
+.game_status_title_container {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+a:hover, a:focus {
+  color: #23527c;
+  text-decoration: none !important;
+  outline-style: none !important;
+}
+
+// Tables
+.table th {
+  background: #fff;
+  color: black;
+  border: 0 !important;
+}
+
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
+  font-family: 'raleway';
+  font-size: 13px;
+}
+
+.table {
+  border-bottom: 1px solid #ddd !important;
+  border-radius: 7px !important;
+}

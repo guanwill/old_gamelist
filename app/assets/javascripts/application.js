@@ -14,10 +14,13 @@
 //= require jquery-ui/autocomplete
 //= require autocomplete-rails
 //= require jquery_ujs
-// require turbolinks
+//= require turbolinks
 //= require jquery.raty
 //= require ratyrate
 // require bootstrap-table
 //= require moment
 //= require bootstrap-sortable
+//= require react
+//= require react_ujs
+//= require components
 //= require_tree .

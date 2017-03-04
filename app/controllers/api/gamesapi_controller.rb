@@ -1,4 +1,6 @@
 class Api::GamesapiController < ApplicationController
+  skip_before_action :verify_authenticity_token
+  before_filter :set_all_cors
 
   def index
     @games = Game.all
@@ -61,6 +63,13 @@ class Api::GamesapiController < ApplicationController
 
   def game_params
     params.required(:game).permit(:title, :genre, :platform, :release_date, :progress, :rating)
+  end
+
+  def set_all_cors
+    headers['Access-Control-Allow-Origin'] = '*'
+    headers['Access-Control-Allow-Methods'] = 'POST, PUT, DELETE, GET, OPTIONS'
+    headers['Access-Control-Request-Method'] = '*'
+    headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
   end
 
 

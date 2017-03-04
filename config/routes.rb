@@ -20,5 +20,5 @@ get '/plan' => 'games#plan'
 get '/completed' => 'games#completed'
 get '/about' => 'about#about'
 post '/search' => 'about#search'
-
+get '/games_index' => 'games#newindex'
 end

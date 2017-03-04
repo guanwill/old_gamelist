@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+gem 'rack-cors', :require => 'rack/cors'
+gem 'react-rails'
+gem 'pry'
+gem 'gon'
+
 gem 'httparty'
 gem 'rails4-autocomplete'
 gem 'jquery-ui-rails'
