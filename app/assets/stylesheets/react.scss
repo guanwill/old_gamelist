@@ -1,9 +1,10 @@
+body {
+  // background: url("/images/zelda3.jpg") !important;
+}
+
 .title {
   padding: 13px 0;
   text-align: center;
-  // background: #fff;
-  // border: 3px solid #e9ebec;
-  // border-radius: 7px;
   color: #1f63ab !important;
 }
 
@@ -23,7 +24,6 @@
 
 a.game_status_title, a.game_status_title:hover {
     color: #337ab7;
-    // text-decoration: none;
     margin-left: 20px;
     padding-right: 20px;
     border-right: 1px solid #337ab7 !important;
@@ -58,8 +58,8 @@ a:hover, a:focus {
 // Tables
 .table th {
   background: #fff;
-  color: black;
   border: 0 !important;
+  color: #b49ee6; //purple
 }
 
 .table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
@@ -70,4 +70,26 @@ a:hover, a:focus {
 .table {
   border-bottom: 1px solid #ddd !important;
   border-radius: 7px !important;
+}
+
+table tr td:nth-child(6) {
+  display: block !important;
+  text-align: right;
+}
+
+.fa-trash-o {
+  cursor: pointer;
+  color: #328fc9 !important;
+}
+
+.table {
+  background: #fff;
+}
+
+// --------------  RESPONSIVENESS ------------------
+@media (min-width: 1199px) {
+  // Gamelist container
+  .gameslist.container {
+    width: 70%;
+  }
 }

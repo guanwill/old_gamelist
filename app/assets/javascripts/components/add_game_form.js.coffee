@@ -17,7 +17,7 @@
   handleSubmit: (e) ->
     e.preventDefault()
     $.ajax
-      url: 'http://localhost:3000/api/gamesapi/'
+      url: window.location.origin + '/api/gamesapi/'
       type: 'POST'
       dataType: 'JSON'
       data: {
@@ -27,12 +27,10 @@
         this.props.addNewGame(data) #this submit button will trigger addRecord method in records
         this.setState (this.getInitialState()) #after submitting data and adding record, return state to initial, which mean all fields emptied
 
+  valid: ->
+      @state.title && @state.progress
 
   render: ->
-
-
-
-
     React.DOM.form
       className: 'form-group collapse'
       onSubmit: @handleSubmit
@@ -83,8 +81,8 @@
             value: 'Strategy'
             'Strategy'
           React.DOM.option
-            value: 'Simmulation'
-            'Simmulation'
+            value: 'Simulation'
+            'Simulation'
           React.DOM.option
             value: 'Novel'
             'Novel'
@@ -151,5 +149,5 @@
       React.DOM.button
         type: 'submit'
         className: 'btn btn-primary'
-        # disabled: !@valid()
+        disabled: !@valid()
         'Add Game'
