@@ -122,6 +122,11 @@ table tr td:nth-child(6) {
   padding: 9px !important;
 }
 
+.gamename-input:focus {
+  outline-style: none !important;
+}
+
+
 // --------------  RESPONSIVENESS ------------------
 @media (min-width: 1199px) {
   // Gamelist container

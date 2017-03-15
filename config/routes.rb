@@ -20,5 +20,9 @@ get '/plan' => 'games#plan'
 get '/completed' => 'games#completed'
 get '/about' => 'about#about'
 post '/search' => 'about#search'
+
+# Views that use React Components
 get '/games_index' => 'games#newindex'
+get '/home' => 'home#homeindex'
+
 end

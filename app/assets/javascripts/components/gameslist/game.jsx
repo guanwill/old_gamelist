@@ -79,21 +79,21 @@ var Game = React.createClass({
         <td className="col-md-4 col-sm-4 playing-th"><input type="text" className="form-control edit-field" defaultValue={this.props.game.title} ref="title" onChange={this.handleChange}/></td>
         <td className="col-md-2 col-sm-2">
           <select className="form-control edit-field" placeholder="Genre" ref="genre" defaultValue={this.props.game.genre} onChange={this.handleChange}>
-            <option value="select"> Select Genre </option>
-            <option value="action"> Action </option>
-            <option value="adventure"> Adventure </option>
-            <option value="fighting"> Fighting </option>
-            <option value="fps"> FPS </option>
-            <option value="sports"> Sports </option>
-            <option value="strategy"> Strategy </option>
-            <option value="simulation"> Simulation </option>
-            <option value="novel"> Novel </option>
-            <option value="other"> Other </option>
+            <option value="Select"> Select Genre </option>
+            <option value="Action"> Action </option>
+            <option value="Adventure"> Adventure </option>
+            <option value="Fighting"> Fighting </option>
+            <option value="Fps"> FPS </option>
+            <option value="Sports"> Sports </option>
+            <option value="Strategy"> Strategy </option>
+            <option value="Simulation"> Simulation </option>
+            <option value="Novel"> Novel </option>
+            <option value="Other"> Other </option>
           </select>
         </td>
         <td className="col-md-2 col-sm-2">
           <select className="form-control edit-field" placeholder="Platform" ref="platform" defaultValue={this.props.game.platform} onChange={this.handleChange}>
-            <option value="select"> Select Platform </option>
+            <option value="Select"> Select Platform </option>
             <option value="PS4"> PS4 </option>
             <option value="PS Vita "> PS Vita </option>
             <option value="Nin 3DS "> Nin 3DS </option>
@@ -101,21 +101,21 @@ var Game = React.createClass({
             <option value="XBOX One"> XBOX One </option>
             <option value="PC"> PC </option>
             <option value="Mobile"> Mobile </option>
-            <option value="other"> Other </option>
+            <option value="Other"> Other </option>
           </select>
         </td>
         <td className="col-md-2 col-sm-2">
           <select className="form-control edit-field" placeholder="progress" ref="progress" defaultValue={this.props.game.progress} onChange={this.handleChange}>
             <option value="select"> Select Progress </option>
-            <option value="0"> 0 </option>
-            <option value="25 "> 25 </option>
-            <option value="50 "> 50 </option>
-            <option value="75"> 75 </option>
-            <option value="100_Storyline"> 100% Storyline </option>
-            <option value="100_Completion"> 100% Completion </option>
-            <option value="wish"> Wish </option>
-            <option value="contemplating"> Contemplating </option>
-            <option value="on_hold"> On Hold </option>
+            <option value="0%"> 0% </option>
+            <option value="25% "> 25% </option>
+            <option value="50% "> 50% </option>
+            <option value="75%"> 75% </option>
+            <option value="100% Storyline"> 100% Storyline </option>
+            <option value="100% Completion"> 100% Completion </option>
+            <option value="Wish"> Wish </option>
+            <option value="Contemplating"> Contemplating </option>
+            <option value="On hold"> On Hold </option>
           </select>
         </td>
         <td className="col-md-2 col-sm-2"><input type="date" className="form-control edit-field" defaultValue={this.props.game.release_date} ref="release_date" onChange={this.handleChange}/></td>

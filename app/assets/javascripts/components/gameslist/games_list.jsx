@@ -3,9 +3,9 @@ var GamesList = React.createClass({
   render: function() {
 
     var deleteGame = this.props.deleteGame;
-    console.log(deleteGame);
+    // console.log(deleteGame);
     var handleEditGame = this.props.handleEditGame;
-    console.log(handleEditGame);
+    // console.log(handleEditGame);
 
     return (
       <div className="tab-content">
@@ -17,7 +17,7 @@ var GamesList = React.createClass({
                 <th className="col-md-4 col-sm-4 playing-th"> Currently Playing </th>
                 <th className="col-md-2 col-sm-2">Genre</th>
                 <th className="col-md-2 col-sm-2">Platform</th>
-                <th className="col-md-2 col-sm-2">Progress (%)</th>
+                <th className="col-md-2 col-sm-2">Progress</th>
                 <th className="col-md-2 col-sm-2">Release Date</th>
                 <th></th>
                 <th></th>
@@ -26,7 +26,7 @@ var GamesList = React.createClass({
 
             <tbody>
               {this.props.game_data.map(function(game){   // console.log(game);
-                if (game.progress != '0' && game.progress != '100') {
+                if (game.progress != '0%' && game.progress != '100% Storyline' && game.progress != '100% Completion' && game.progress != 'Wish' && game.progress != 'Contemplating' && game.progress != 'On hold') {
                   return (
                     <Game game={game} key={game.id} deleteGame={deleteGame} handleEditGame={handleEditGame}/>
                   )
@@ -43,7 +43,7 @@ var GamesList = React.createClass({
                 <th className="col-md-4 col-sm-4 playing-th"> Currently Playing </th>
                 <th className="col-md-2 col-sm-2">Genre</th>
                 <th className="col-md-2 col-sm-2">Platform</th>
-                <th className="col-md-2 col-sm-2">Progress (%)</th>
+                <th className="col-md-2 col-sm-2">Progress</th>
                 <th className="col-md-2 col-sm-2">Release Date</th>
                 <th></th>
                 <th></th>
@@ -52,7 +52,7 @@ var GamesList = React.createClass({
 
             <tbody>
               {this.props.game_data.map(function(game){   // console.log(game);
-                if (game.progress == '0') {
+                if (game.progress == '0%' || game.progress == 'On hold') {
                   return (
                     <Game game={game} key={game.id} deleteGame={deleteGame} handleEditGame={handleEditGame}/>
                   )
@@ -69,7 +69,7 @@ var GamesList = React.createClass({
                 <th className="col-md-4 col-sm-4 playing-th"> Currently Playing </th>
                 <th className="col-md-2 col-sm-2">Genre</th>
                 <th className="col-md-2 col-sm-2">Platform</th>
-                <th className="col-md-2 col-sm-2">Progress (%)</th>
+                <th className="col-md-2 col-sm-2">Progress</th>
                 <th className="col-md-2 col-sm-2">Release Date</th>
                 <th></th>
                 <th></th>
@@ -78,7 +78,33 @@ var GamesList = React.createClass({
 
             <tbody>
               {this.props.game_data.map(function(game){   // console.log(game);
-                if (game.progress == '100') {
+                if (game.progress == '100% Storyline' || game.progress == '100% Completion') {
+                  return (
+                    <Game game={game} key={game.id} deleteGame={deleteGame} handleEditGame={handleEditGame}/>
+                  )
+                }
+              })}
+            </tbody>
+          </table>
+        </div>
+
+        <div id="game_wish" className="tab-pane fade in ">
+          <table className="table table-bordered">
+            <thead>
+              <tr>
+                <th className="col-md-4 col-sm-4 playing-th"> Currently Playing </th>
+                <th className="col-md-2 col-sm-2">Genre</th>
+                <th className="col-md-2 col-sm-2">Platform</th>
+                <th className="col-md-2 col-sm-2">Progress</th>
+                <th className="col-md-2 col-sm-2">Release Date</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {this.props.game_data.map(function(game){   // console.log(game);
+                if (game.progress == 'Wish' || game.progress == 'Contemplating') {
                   return (
                     <Game game={game} key={game.id} deleteGame={deleteGame} handleEditGame={handleEditGame}/>
                   )

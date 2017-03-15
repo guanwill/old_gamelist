@@ -50,6 +50,7 @@ var Gameslist = React.createClass({
             <a className="game_status_title" data-toggle="tab" href="#game_playing">Playing</a>
             <a className="game_status_title" data-toggle="tab" href="#game_start">Planning</a>
             <a className="game_status_title" data-toggle="tab" href="#game_completed">Completed</a>
+            <a className="game_status_title" data-toggle="tab" href="#game_wish">Wishlist</a>
             <a className="game_status_title_last" data-toggle="collapse" data-target="#add_game">Add</a>
           </div>
 

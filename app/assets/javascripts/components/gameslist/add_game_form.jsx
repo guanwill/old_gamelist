@@ -45,20 +45,20 @@ var AddGameForm = React.createClass({
           <input type="text" className="form-control add-game-field" placeholder="Title" name="title" value={this.state.title} onChange={this.handleChange}/>
 
           <select className="form-control add-game-field" placeholder="Genre" name="genre" value={this.state.genre} onChange={this.handleChange}>
-            <option value="select"> Select Genre </option>
-            <option value="action"> Action </option>
-            <option value="adventure"> Adventure </option>
-            <option value="fighting"> Fighting </option>
-            <option value="fps"> FPS </option>
-            <option value="sports"> Sports </option>
-            <option value="strategy"> Strategy </option>
-            <option value="simulation"> Simulation </option>
-            <option value="novel"> Novel </option>
-            <option value="other"> Other </option>
+            <option value="Select"> Select Genre </option>
+            <option value="Action"> Action </option>
+            <option value="Adventure"> Adventure </option>
+            <option value="Fighting"> Fighting </option>
+            <option value="Fps"> FPS </option>
+            <option value="Sports"> Sports </option>
+            <option value="Strategy"> Strategy </option>
+            <option value="Simulation"> Simulation </option>
+            <option value="Novel"> Novel </option>
+            <option value="Other"> Other </option>
           </select>
 
           <select className="form-control add-game-field" placeholder="Platform" name="platform" value={this.state.platform} onChange={this.handleChange}>
-            <option value="select"> Select Platform </option>
+            <option value="Select"> Select Platform </option>
             <option value="PS4"> PS4 </option>
             <option value="PS Vita "> PS Vita </option>
             <option value="Nin 3DS "> Nin 3DS </option>
@@ -66,20 +66,20 @@ var AddGameForm = React.createClass({
             <option value="XBOX One"> XBOX One </option>
             <option value="PC"> PC </option>
             <option value="Mobile"> Mobile </option>
-            <option value="other"> Other </option>
+            <option value="Other"> Other </option>
           </select>
 
           <select className="form-control add-game-field" placeholder="progress" name="progress" value={this.state.progress} onChange={this.handleChange}>
-            <option value="select"> Select Progress </option>
-            <option value="0"> 0 </option>
-            <option value="25 "> 25 </option>
-            <option value="50 "> 50 </option>
-            <option value="75"> 75 </option>
-            <option value="100_Storyline"> 100% Storyline </option>
-            <option value="100_Completion"> 100% Completion </option>
-            <option value="wish"> Wish </option>
-            <option value="contemplating"> Contemplating </option>
-            <option value="on_hold"> On Hold </option>
+            <option value="Select"> Select Progress </option>
+            <option value="0%"> 0% </option>
+            <option value="25% "> 25% </option>
+            <option value="50% "> 50% </option>
+            <option value="75%"> 75% </option>
+            <option value="100% Storyline"> 100% Storyline </option>
+            <option value="100% Completion"> 100% Completion </option>
+            <option value="Wish"> Wish </option>
+            <option value="Contemplating"> Contemplating </option>
+            <option value="On hold"> On Hold </option>
           </select>
 
           <input type="date" className="form-control add-game-field" placeholder="Release Date" name="release_date" value={this.state.release_date} onChange={this.handleChange}/>
