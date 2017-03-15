@@ -1,0 +1,25 @@
+var SearchForm = React.createClass({
+
+  render: function(){
+    return (
+      <div className="welcome-div">
+        <h1 className="welcome-title"> MGL </h1>
+
+        <div className="api_form">
+          <input type="text" ref="query" className="ui-autocomplete-input gamename-input" placeholder="Search for a game"/>
+          <button type="submit" className="btn-primary" onClick={this.createAjax}><i className="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+
+      </div>
+    )
+  },
+
+  createAjax: function() {
+    var query = ReactDOM.findDOMNode(this.refs.query).value;
+    var URL = 'http://www.giantbomb.com/api/search/?api_key=cf71909f53e1497132eb781d7aab4d0936bfb352&format=json&query=' + query + '&resources=game&limit=10';
+    console.log(URL);
+    // var URL = 'http://itunes.apple.com/search?term=' + query;
+    this.props.searchthis(URL)
+  }
+
+});
