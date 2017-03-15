@@ -20,6 +20,8 @@ var Home = React.createClass({
     $.ajax({
       method: 'get',
       dataType: 'jsonp',
+      crossDomain: true,
+      jsonp: 'json_callback',
       // url: 'https://itunes.apple.com/search?term=fun',
       url: URL,
       success: function(response){

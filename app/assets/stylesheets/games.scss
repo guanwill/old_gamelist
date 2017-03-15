@@ -20,6 +20,7 @@ a:hover {
   background: #150832 !important;
   width: 100%;
   border-radius: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .flash-notice {
@@ -299,9 +300,7 @@ a:hover {
   font-size: 12px;
 }
 .welcome-div {
-    position: absolute;
-    top: 30%;
-    width: 100%;
+  width: 100%;
 }
 .welcome-img {
   display: block;
