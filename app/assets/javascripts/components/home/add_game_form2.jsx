@@ -1,8 +1,8 @@
-var AddGameForm = React.createClass({
+var AddGameForm2 = React.createClass({
 
   getInitialState() {
     return {
-      title: '',
+      title: this.props.gameResult.name,
       genre: '',
       platform: '',
       progress: '',
@@ -27,13 +27,26 @@ var AddGameForm = React.createClass({
         game: this.state
       },
       success: (data) => {
-        this.props.addNewGame(data);
-        this.setState (this.getInitialState())
+        console.log(data);
+        alert('Success')
+        var formid = '#gameid' + this.props.gameResult.id
+        $(formid).removeClass('in')
+        // this.setState (this.getInitialState())
+      },
+      error: () => {
+        alert('Cannot add a game that already exists')
+        var formid = '#gameid' + this.props.gameResult.id
+        $(formid).removeClass('in')
       }
     })
   },
 
+
   render: function() {
+
+    var game = this.props.gameResult;
+    var form_target_id = "gameid" + game.id
+    var form_target_classname = "modal fade form-group gameid" + game.id //for if you want form to be a modal
 
     if (this.state.title != "" && this.state.progress != "") {
       var disabled = false
@@ -42,12 +55,11 @@ var AddGameForm = React.createClass({
       var disabled = true
     }
 
-
     return (
       <div className="add-game-container">
-        <form id="add_game" className="form-group collapse" onSubmit={this.handleSubmit}>
+        <form id={form_target_id} className="form-group collapse" onSubmit={this.handleSubmit}>
 
-          <input type="text" className="form-control add-game-field" placeholder="Title" name="title" value={this.state.title} onChange={this.handleChange}/>
+          <input readOnly="readOnly"   type="text" className="form-control add-game-field" placeholder="Title" name="title" value={this.state.title} onChange={this.handleChange}/>
 
           <select className="form-control add-game-field" placeholder="Genre" name="genre" value={this.state.genre} onChange={this.handleChange}>
             <option value="Select"> Select Genre </option>

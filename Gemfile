@@ -4,6 +4,7 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'react-rails'
 gem 'pry'
 gem 'gon'
+# gem 'spinjs-rails'
 
 gem 'httparty'
 gem 'rails4-autocomplete'

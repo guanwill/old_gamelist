@@ -1,6 +1,7 @@
 class GamesController < ApplicationController
 autocomplete :gamesapi, :name, :full => true
 helper_method :sort_column, :sort_direction
+skip_before_action :verify_authenticity_token
 
 # make sure user is logged in order to view their games list
 # before_action :authenticate_user!
@@ -18,9 +19,7 @@ end
 def newindex
   @current_user_id = current_user.id
   @games = Game.where(:user_id => @current_user_id)
-  @user = User.find_by(:id => current_user.id)
 
-  # binding.pry
   # use gon to display and watch for user's name
   @watch_user_name = current_user.name + " 's Games List "
   gon.watch.username = @watch_user_name

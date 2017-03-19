@@ -6,7 +6,9 @@ var Home = React.createClass({
 
   getInitialState: function(){
     return{
-      searchResults: []
+      searchResults: [],
+      // query_array: <span> Create your own game list <a href="/games_index">here</a> </span>,
+      query_array: []
     }
   },
 
@@ -16,13 +18,18 @@ var Home = React.createClass({
     })
   },
 
-  searchthis: function(URL){
+  getQuery: function(query){
+    this.setState({
+      query_array: query
+    })
+  },
+
+  searchthis: function(URL, query){
     $.ajax({
       method: 'get',
       dataType: 'jsonp',
       crossDomain: true,
       jsonp: 'json_callback',
-      // url: 'https://itunes.apple.com/search?term=fun',
       url: URL,
       success: function(response){
         this.showResults(response);
@@ -33,8 +40,8 @@ var Home = React.createClass({
   render: function(){
     return (
       <div>
-        <SearchForm searchthis={this.searchthis} />
-        <Results searchResults={this.state.searchResults}/>
+        <SearchForm getQuery={this.getQuery} searchthis={this.searchthis} />
+        <Results query_array={this.state.query_array} searchResults={this.state.searchResults}/>
       </div>
     )
   }

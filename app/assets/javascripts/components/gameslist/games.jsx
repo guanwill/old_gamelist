@@ -1,7 +1,12 @@
 var Gameslist = React.createClass({
+
+  // componentDidMount(){
+  //    gon.username
+  // },
+
   getInitialState: function() {
     return {
-      game_data: this.props.games
+      game_data: this.props.games,
     }
   },
 
@@ -15,9 +20,6 @@ var Gameslist = React.createClass({
     var game_data = React.addons.update(this.state.game_data, {$push: [game]});
     this.setState({
       game_data: game_data
-      // appointments: appointments.sort(function(a,b){
-      //   return new Date(a.appt_time) - new Date(b.appt_time);
-      // })
     })
   },
 
@@ -38,6 +40,7 @@ var Gameslist = React.createClass({
   },
 
   render: function() {
+
     return (
       <div>
         <div className="gameslist container">
