@@ -31,7 +31,7 @@ var Results = React.createClass({
         </div>
 
         <div className="divider-top">
-          <p><span> Create your own game list <a href="/games_index">here</a> </span></p>
+          <p><span> Build your own game list <a href="/games_index">here</a> </span></p>
         </div>
 
       </div>

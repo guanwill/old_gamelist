@@ -7,7 +7,6 @@ var Home = React.createClass({
   getInitialState: function(){
     return{
       searchResults: [],
-      // query_array: <span> Create your own game list <a href="/games_index">here</a> </span>,
       query_array: []
     }
   },
