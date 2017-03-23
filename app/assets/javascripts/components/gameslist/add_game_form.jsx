@@ -29,6 +29,12 @@ var AddGameForm = React.createClass({
       success: (data) => {
         this.props.addNewGame(data);
         this.setState (this.getInitialState())
+        alert('Success')
+        $('#add_game').removeClass('in')
+      },
+      error: () => {
+        alert('This game already exists in your games list')
+        $('#add_game').removeClass('in')
       }
     })
   },
