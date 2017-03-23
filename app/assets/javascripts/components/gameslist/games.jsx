@@ -41,6 +41,17 @@ var Gameslist = React.createClass({
 
   render: function() {
 
+    // sort data alphetically
+    var game_data = this.state.game_data
+    game_data.sort(compare)
+    function compare(a,b) {
+      if (a.title < b.title)
+        return -1;
+      if (a.title > b.title)
+        return 1;
+      return 0;
+    }
+
     return (
       <div>
         <div className="gameslist container">

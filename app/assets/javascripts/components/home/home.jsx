@@ -13,7 +13,7 @@ var Home = React.createClass({
 
   showResults: function(response){
     this.setState({
-      searchResults: response.results
+      searchResults: response.results,
     })
   },
 
@@ -32,7 +32,13 @@ var Home = React.createClass({
       url: URL,
       success: function(response){
         this.showResults(response);
-      }.bind(this)
+        if (response.error == "OK"){
+          $('.divider-second-top p').text("Search Results for: " + this.state.query_array)
+        }
+        else {
+          $('.divider-second-top p').text("")   
+        }
+      }.bind(this),
     });
   },
 
@@ -40,7 +46,7 @@ var Home = React.createClass({
     return (
       <div>
         <SearchForm getQuery={this.getQuery} searchthis={this.searchthis} />
-        <Results query_array={this.state.query_array} searchResults={this.state.searchResults}/>
+        <Results searchResults={this.state.searchResults}/>
       </div>
     )
   }

@@ -6,7 +6,7 @@ var AddGameForm2 = React.createClass({
       genre: '',
       platform: '',
       progress: '',
-      release_date: '',
+      release_date: this.props.gameDate
     }
   },
 
@@ -34,7 +34,7 @@ var AddGameForm2 = React.createClass({
         // this.setState (this.getInitialState())
       },
       error: () => {
-        alert('Cannot add a game that already exists')
+        alert('This game already exists in your games list')
         var formid = '#gameid' + this.props.gameResult.id
         $(formid).removeClass('in')
       }
@@ -59,9 +59,9 @@ var AddGameForm2 = React.createClass({
       <div className="add-game-container">
         <form id={form_target_id} className="form-group collapse" onSubmit={this.handleSubmit}>
 
-          <input readOnly="readOnly"   type="text" className="form-control add-game-field" placeholder="Title" name="title" value={this.state.title} onChange={this.handleChange}/>
+          <input readOnly="readOnly" type="text" className="form-control add-game-field2" placeholder="Title" name="title" value={this.state.title} onChange={this.handleChange}/>
 
-          <select className="form-control add-game-field" placeholder="Genre" name="genre" value={this.state.genre} onChange={this.handleChange}>
+          <select className="form-control add-game-field2" placeholder="Genre" name="genre" value={this.state.genre} onChange={this.handleChange}>
             <option value="Select"> Select Genre </option>
             <option value="Action"> Action </option>
             <option value="Adventure"> Adventure </option>
@@ -74,7 +74,7 @@ var AddGameForm2 = React.createClass({
             <option value="Other"> Other </option>
           </select>
 
-          <select className="form-control add-game-field" placeholder="Platform" name="platform" value={this.state.platform} onChange={this.handleChange}>
+          <select className="form-control add-game-field2" placeholder="Platform" name="platform" value={this.state.platform} onChange={this.handleChange}>
             <option value="Select"> Select Platform </option>
             <option value="PS4"> PS4 </option>
             <option value="PS Vita "> PS Vita </option>
@@ -86,7 +86,7 @@ var AddGameForm2 = React.createClass({
             <option value="Other"> Other </option>
           </select>
 
-          <select className="form-control add-game-field" placeholder="progress" name="progress" value={this.state.progress} onChange={this.handleChange}>
+          <select className="form-control add-game-field2" placeholder="progress" name="progress" value={this.state.progress} onChange={this.handleChange}>
             <option value="Select"> Select Progress </option>
             <option value="0%"> 0% </option>
             <option value="25% "> 25% </option>
@@ -99,9 +99,9 @@ var AddGameForm2 = React.createClass({
             <option value="On hold"> On Hold </option>
           </select>
 
-          <input type="date" className="form-control add-game-field" placeholder="Release Date" name="release_date" value={this.state.release_date} onChange={this.handleChange}/>
+          <input type="text" readOnly="readOnly" className="form-control add-game-field2" placeholder="Release Date" name="release_date" value={this.state.release_date} onChange={this.handleChange}/>
 
-          <button disabled={disabled} type="submit" className="btn btn-primary add-game-button" >Add Game </button>
+          <button disabled={disabled} type="submit" className="btn btn-primary add-game-button add-game-buton-2" >Add Game </button>
 
 
 

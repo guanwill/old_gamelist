@@ -8,18 +8,11 @@ var Results = React.createClass({
       );
     });
 
-    if (this.props.query_array == ""){
-      var query_array = ""
-    }
-    else {
-      var query_array = "Search results for: " + this.props.query_array
-    }
-
     return (
       <div className="search-container">
 
         <div className="divider-second-top">
-          <p>{query_array}</p>
+          <p></p>
         </div>
 
         <div className="search-container2">

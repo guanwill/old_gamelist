@@ -55,7 +55,7 @@ var Footer = React.createClass({
     return (
       <div>
         <div className="home-divider">
-          <h2>Latest Games</h2>
+          <p className="latest-games-heading">Latest Games</p>
           <FooterGamesList latestGames={this.state.latestGames}/>
         </div>
       </div>
