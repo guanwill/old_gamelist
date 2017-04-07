@@ -16,7 +16,7 @@ var Footer = React.createClass({
     var timeNow = moment().format();
     console.log(timeNow);
 
-    var URL = 'http://www.giantbomb.com/api/games/?api_key=cf71909f53e1497132eb781d7aab4d0936bfb352&&sort=original_release_date:desc&format=jsonp&filter=original_release_date:2016-03-14|' + timeNow + '&limit=10'
+    var URL = 'https://www.giantbomb.com/api/games/?api_key=cf71909f53e1497132eb781d7aab4d0936bfb352&&sort=original_release_date:desc&format=jsonp&filter=original_release_date:2016-03-14|' + timeNow + '&limit=10'
     console.log(URL);
 
     $.ajax({

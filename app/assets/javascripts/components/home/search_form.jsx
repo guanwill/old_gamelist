@@ -19,7 +19,7 @@ var SearchForm = React.createClass({
 
   createAjax: function() {
     var query = ReactDOM.findDOMNode(this.refs.query).value;
-    var URL = 'http://www.giantbomb.com/api/search/?api_key=cf71909f53e1497132eb781d7aab4d0936bfb352&format=jsonp&query=' + query + '&resources=game&limit=10';
+    var URL = 'https://www.giantbomb.com/api/search/?api_key=cf71909f53e1497132eb781d7aab4d0936bfb352&format=jsonp&query=' + query + '&resources=game&limit=10';
     this.props.getQuery(query)
     this.props.searchthis(URL)
     $('.divider-second-top p').text("Searching...")

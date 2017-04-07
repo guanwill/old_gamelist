@@ -1,7 +1,20 @@
 var ResultItems = React.createClass({
 
-  render: function(){
+  // getInitialState() {
+  //   return {
+  //     currentUser: this.props.current_user
+  //   }
+  // },
 
+  render_add_button: function(){
+    if (this.props.currentUser != ""){
+      return (
+        <a className="game_results_add game_status_title_last" data-toggle="collapse" data-target={data_target_name}>Add</a>
+      )
+    }
+  },
+
+  render: function(){
     var game = this.props.gameResult;
     if (this.props.gameResult.original_release_date != ""){
       var gameDate = moment(this.props.gameResult.original_release_date).local().format('DD/MM/YYYY')
@@ -13,7 +26,6 @@ var ResultItems = React.createClass({
       var platform = plat.name
       platform_array.push(platform)
     })
-
 
     var data_target_name = "#gameid" + game.id
     var data_target_classname = ".gameid" + game.id //for if you want to trigger addGame form in a modal
@@ -31,7 +43,9 @@ var ResultItems = React.createClass({
             <p className="game_platform_results">{platform_array.join(', ')}</p>
             {game.deck}
 
-            <a className="game_results_add game_status_title_last" data-toggle="collapse" data-target={data_target_name}>Add</a>
+            { this.props.currentUser != null ?
+              <a className="game_results_add game_status_title_last" data-toggle="collapse" data-target={data_target_name}>Add</a> : ""
+            }
           </div>
         </div>
 

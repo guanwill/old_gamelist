@@ -7,7 +7,8 @@ var Home = React.createClass({
   getInitialState: function(){
     return{
       searchResults: [],
-      query_array: []
+      query_array: [],
+      currentUser: this.props.currentUser
     }
   },
 
@@ -36,7 +37,7 @@ var Home = React.createClass({
           $('.divider-second-top p').text("Search Results for: " + this.state.query_array)
         }
         else {
-          $('.divider-second-top p').text("")   
+          $('.divider-second-top p').text("")
         }
       }.bind(this),
     });
@@ -46,7 +47,7 @@ var Home = React.createClass({
     return (
       <div>
         <SearchForm getQuery={this.getQuery} searchthis={this.searchthis} />
-        <Results searchResults={this.state.searchResults}/>
+        <Results currentUser={this.state.currentUser} searchResults={this.state.searchResults}/>
       </div>
     )
   }

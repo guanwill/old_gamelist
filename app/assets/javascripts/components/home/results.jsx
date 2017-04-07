@@ -2,9 +2,13 @@ var Results = React.createClass({
 
   render: function(){
 
+    if (this.props.currentUser != null) {
+      var currentUserName = this.props.currentUser.name
+    }
+
     var resultItems = this.props.searchResults.map(function(result){
       return (
-        <ResultItems key={result.id} gameResult={result}/>
+        <ResultItems key={result.id} gameResult={result} currentUser={currentUserName} />
       );
     });
 

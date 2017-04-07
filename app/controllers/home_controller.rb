@@ -6,6 +6,8 @@ def homeindex
     @watch_user_name = current_user.name + " 's Games List "
     gon.watch.username = @watch_user_name
   end
+
+  @currentUser = current_user
 end
 
 end
