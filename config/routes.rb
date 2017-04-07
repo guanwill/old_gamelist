@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     end
   end
 
-  # post '/rate' => 'rater#create', :as => 'rate'
+  post '/rate' => 'rater#create', :as => 'rate'
   devise_for :users
   # devise_for :users, :controllers => {:registrations => "my_devise/registrations"}
   root to: "home#homeindex"
