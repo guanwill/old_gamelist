@@ -241,7 +241,7 @@
     width: 50px;
     object-fit: cover;
     margin-bottom: 13px;
-    margin-top: 16px;  
+    margin-top: 16px;
   }
   .footer-row a {
     font-size: 10px;
@@ -409,6 +409,11 @@
   }
   .sign_up_field {
     margin-bottom: 0px;
+  }
+
+  //Search game results
+  .search-results-container {
+    padding: 0px 20px !important;
   }
 
 }
