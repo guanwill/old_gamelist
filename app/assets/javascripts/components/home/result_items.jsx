@@ -22,10 +22,19 @@ var ResultItems = React.createClass({
 
     var platform_array = []
     var platforms = this.props.gameResult.platforms
-    platforms.forEach(function(plat){
-      var platform = plat.name
-      platform_array.push(platform)
-    })
+    if (platforms != null) {
+      platforms.forEach(function(plat){
+        var platform = plat.name
+        platform_array.push(platform)
+      })
+    }
+
+    if (game.image != null) {
+        var game_image_url = game.image.icon_url
+    }
+    else {
+      var game_image_url = ""
+    }
 
     var data_target_name = "#gameid" + game.id
     var data_target_classname = ".gameid" + game.id //for if you want to trigger addGame form in a modal
@@ -35,7 +44,7 @@ var ResultItems = React.createClass({
         <div className="row row-eq-height">
 
           <div className='col-md-2 col-sm-2 image-col'>
-            <img className="api-image=" src={game.image.icon_url}/>
+            <img className="api-image=" src={game_image_url}/>
           </div>
 
           <div className='col-md-10 col-sm-10 para-col'>
