@@ -334,6 +334,14 @@
     font-size: 11px;
   }
 
+  .welcome-title {
+    text-shadow:
+    -1px -1px 0 #0a364c,
+    1px -1px 0 #0a364c,
+    -1px 1px 0 #0a364c,
+    1px 1px 0 #0a364c;
+  }
+
   #plan-container table tr td:nth-child(4),  #index-container table tr td:nth-child(4) {
     text-align: center;
   }
