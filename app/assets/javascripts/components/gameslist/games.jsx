@@ -1,4 +1,4 @@
-var Gameslist = React.createClass({
+var Games = React.createClass({
 
   // componentDidMount(){
   //    gon.username

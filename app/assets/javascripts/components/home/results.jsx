@@ -12,6 +12,9 @@ var Results = React.createClass({
       );
     });
 
+    var user_url_raw = "/" + this.props.currentUser.id + "/games_index"
+    var user_url = user_url
+
     return (
       <div className="search-container">
 
@@ -28,7 +31,7 @@ var Results = React.createClass({
         </div>
 
         <div className="divider-top">
-          <p><span> Build your own game list <a href="/games_index">here</a> </span></p>
+          <p><span> Build your own game list <a href="{user_url}">here</a> </span></p>
         </div>
 
       </div>

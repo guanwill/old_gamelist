@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   # post '/search' => 'about#search'
 
   # Views that use React Components
-  get '/games_index' => 'games#newindex'
+  get '/:id/games_index' => 'games#newindex', :as => 'games_index'
   get '/home' => 'home#homeindex'
 
 end
