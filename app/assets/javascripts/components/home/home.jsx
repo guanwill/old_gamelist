@@ -32,9 +32,15 @@ var Home = React.createClass({
       jsonp: 'json_callback',
       url: URL,
       success: function(response){
+        var results_count = response.results.length
         this.showResults(response);
         if (response.error == "OK"){
-          $('.divider-second-top p').text("Search Results for: " + this.state.query_array)
+          if (results_count == 0){
+            $('.divider-second-top p').text("No results")
+          }
+          else {
+            $('.divider-second-top p').text("Search Results for: " + this.state.query_array)
+          }
         }
         else {
           $('.divider-second-top p').text("")
