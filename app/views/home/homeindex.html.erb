@@ -1,4 +1,4 @@
 <div class="home-container">
-  <%= react_component('Home',  {currentUser: @currentUser} ) %>
-  <%= react_component 'Footer' %>
+  <%= react_component('Home',  {currentUser: @currentUser, gb_search_api_url: @GB_SEARCH_API_URL} ) %>
+  <%= react_component('Footer', {gb_games_api_url: @GB_GAMES_API_URL}) %>
 </div>

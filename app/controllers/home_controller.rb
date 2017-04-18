@@ -8,6 +8,9 @@ def homeindex
   end
 
   @currentUser = current_user
+
+  @GB_GAMES_API_URL = ENV['GB_GAMES_API_URL']
+  @GB_SEARCH_API_URL = ENV['GB_SEARCH_API_URL']
 end
 
 end

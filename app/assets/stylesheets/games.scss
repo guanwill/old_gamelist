@@ -291,6 +291,11 @@ a:hover {
   color: rgb(56, 76, 145);
   color: #31708f;
   font-size: 80px;
+  text-shadow:
+  -1px -1px 0 #8bc4cc,
+  1px -1px 0 #8bc4cc,
+  -1px 1px 0 #8bc4cc,
+  1px 1px 0 #8bc4cc;
 }
 .welcome-p {
   text-align: center;

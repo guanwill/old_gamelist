@@ -8,7 +8,8 @@ var Home = React.createClass({
     return{
       searchResults: [],
       query_array: [],
-      currentUser: this.props.currentUser
+      currentUser: this.props.currentUser,
+      gb_search_api_url: this.props.gb_search_api_url
     }
   },
 
@@ -52,7 +53,7 @@ var Home = React.createClass({
   render: function(){
     return (
       <div>
-        <SearchForm getQuery={this.getQuery} searchthis={this.searchthis} />
+        <SearchForm gb_search_api_url={this.state.gb_search_api_url} getQuery={this.getQuery} searchthis={this.searchthis} />
         <Results currentUser={this.state.currentUser} searchResults={this.state.searchResults}/>
       </div>
     )
