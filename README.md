@@ -22,15 +22,15 @@ There are indeed a lot of websites out there that provide similar features, howe
 * Ruby on Rails
 * Postgresql
 * HTML5/CSS3/Bootstrap
-* jQuery/aJax
+* jQuery/Ajax
 * Google Fonts
 * [React-rails](https://github.com/reactjs/react-rails)
 * [Devise Gem](https://github.com/plataformatec/devise)
-* [Moment.JS](https://momentjs.com/)
+* [Moment.js](https://momentjs.com/)
 * [GiantBomb's API](http://www.giantbomb.com/api/)
 * ~[RatyRate Gem](https://github.com/wazery/ratyrate)~ No longer used
-* ~HTTParty~ No longer used
 * ~[Rails4-autocomplete Gem](https://github.com/peterwillcn/rails4-autocomplete)~ No longer used
+* ~HTTParty~ No longer used
 
 ## Future Considerations
 * Integrate autofill feature so that users don't have to type the whole name of the game
