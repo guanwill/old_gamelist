@@ -13,19 +13,14 @@ var Footer = React.createClass({
   },
 
   getLatestGames: function(){
-    var timeNow = moment().format();
-    console.log(timeNow);
-
-    var gb_games_api_url = this.props.gb_games_api_url
-    var URL = gb_games_api_url + '&&sort=original_release_date:desc&format=jsonp&filter=original_release_date:2016-03-14|' + timeNow + '&limit=10'
-
 
     $.ajax({
       method: 'get',
-      dataType: 'jsonp',
+      // dataType: 'jsonp',
       crossDomain: true,
-      jsonp: 'json_callback',
-      url: URL,
+      // jsonp: 'json_callback',
+      // url: URL,
+      url: '/getnewgames',
       success: function(response){
         this.showLatestGames(response);
         // console.log(response)

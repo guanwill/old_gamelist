@@ -19,11 +19,8 @@ var SearchForm = React.createClass({
 
   createAjax: function() {
     var query = ReactDOM.findDOMNode(this.refs.query).value;
-    var gb_search_api_url = this.props.gb_search_api_url
-    var URL = gb_search_api_url + '&format=jsonp&query=' + query + '&resources=game&limit=10';
-    // console.log(URL)
     this.props.getQuery(query)
-    this.props.searchthis(URL)
+    this.props.searchthis(query)
     $('.divider-second-top p').text("Searching...")
   }
 });

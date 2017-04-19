@@ -5,6 +5,7 @@ gem 'react-rails'
 gem 'pry'
 gem 'gon'
 gem "figaro"
+gem "rest-client"
 
 gem 'httparty'
 gem 'rails4-autocomplete'

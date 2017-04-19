@@ -24,4 +24,7 @@ Rails.application.routes.draw do
   get '/games_index' => 'games#newindex'
   get '/home' => 'home#homeindex'
 
+  get '/getsearchresults/:query' => 'home#getsearchresults'
+  get '/getnewgames' => 'home#getnewgames'
+
 end

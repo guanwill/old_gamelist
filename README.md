@@ -8,7 +8,7 @@ Heroku: https://stark-retreat-73573.herokuapp.com/
 * Search for information on any game that you want
 
 ## Inspiration
-There are indeed a lot of websites out there that provide similar features, however, I still end up using Ms Excel at the end of the day to track my games. Why? Because Excel is simple and very easy on the eyes. That was all I needed and thus this app was created to solve this problem. 
+There are indeed a lot of websites out there that provide similar features, however, I still end up using Ms Excel at the end of the day to track my games. Why? Because Excel is simple and very easy on the eyes. That was all I needed and thus this app was created to solve this problem.
 
 ## Features
 * Users are required to create an account in order to view and create their own list
@@ -27,6 +27,7 @@ There are indeed a lot of websites out there that provide similar features, howe
 * [React-rails](https://github.com/reactjs/react-rails)
 * [Devise Gem](https://github.com/plataformatec/devise)
 * [Moment.js](https://momentjs.com/)
+* [Rest-client](https://github.com/rest-client/rest-client)
 * [GiantBomb's API](http://www.giantbomb.com/api/)
 * ~[RatyRate Gem](https://github.com/wazery/ratyrate)~ No longer used
 * ~[Rails4-autocomplete Gem](https://github.com/peterwillcn/rails4-autocomplete)~ No longer used

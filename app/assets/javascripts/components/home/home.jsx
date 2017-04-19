@@ -1,15 +1,10 @@
 var Home = React.createClass({
 
-  // componentDidMount(){
-  //    this.searchthis("https://itunes.apple.com/search?term=fun");
-  // },
-
   getInitialState: function(){
     return{
       searchResults: [],
       query_array: [],
-      currentUser: this.props.currentUser,
-      gb_search_api_url: this.props.gb_search_api_url
+      currentUser: this.props.currentUser
     }
   },
 
@@ -25,13 +20,15 @@ var Home = React.createClass({
     })
   },
 
-  searchthis: function(URL, query){
+  // searchthis: function(URL, query){
+  searchthis: function(query){
     $.ajax({
       method: 'get',
-      dataType: 'jsonp',
+      // dataType: 'jsonp',
       crossDomain: true,
-      jsonp: 'json_callback',
-      url: URL,
+      // jsonp: 'json_callback',
+      // url: URL,
+      url: '/getsearchresults/' + query,
       success: function(response){
         var results_count = response.results.length
         this.showResults(response);
@@ -53,7 +50,7 @@ var Home = React.createClass({
   render: function(){
     return (
       <div>
-        <SearchForm gb_search_api_url={this.state.gb_search_api_url} getQuery={this.getQuery} searchthis={this.searchthis} />
+        <SearchForm getQuery={this.getQuery} searchthis={this.searchthis} />
         <Results currentUser={this.state.currentUser} searchResults={this.state.searchResults}/>
       </div>
     )
