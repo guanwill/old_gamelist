@@ -17,7 +17,7 @@ gem 'rails_bootstrap_sortable'
 
 gem 'devise'
 gem 'ratyrate'
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'materialize-sass'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
